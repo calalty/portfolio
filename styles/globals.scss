@@ -170,15 +170,12 @@
   }
 }
 
-
-
 .wave {
   position: absolute;
   background-image: url(../assets/wave.svg);
   background-repeat: repeat-x;
   bottom: 0;
   opacity: .25;
-  width: 100%;
   height: 35%;
 
   &-container {
@@ -189,8 +186,7 @@
     display: inline-block;
 
     .wave {
-      animation: wave 60s linear infinite;
-      animation-delay: 0s;
+      animation: wave 80s linear infinite;
       animation-fill-mode: both;
       animation-play-state: paused;
     }

@@ -1,2 +1,4 @@
 import me from "./me.png";
-export { me };
+import temple from "./temple.png";
+import snoop from "./snoop.gif";
+export { me, temple, snoop };
