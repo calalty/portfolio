@@ -1,14 +1,17 @@
 import { navLinks } from "@/contents/navLinks";
 import Link from "next/link";
 import React, { useState } from "react";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(" ");
   const [toggle, setToggle] = useState<boolean>();
 
   return (
-    <nav className="w-full flex items-center p-5 fixed top-0 z-20 justify-between mx-auto">
+    <nav
+      className="w-full flex items-center px-10 fixed top-0 justify-between mx-auto backdrop-blur-sm bg-[rgba(19,19,19,.15)] border-b border-b-[#ffffff50] z-50 pt-4 pb-3
+    "
+    >
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -16,15 +19,17 @@ const NavBar = () => {
       >
         <Link
           href={"#"}
-          className="flex flex-col items-center leading-[5px] text-[12px]"
+          className="flex items-center"
           onClick={() => {
             setIsActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <span className="stretch-font">CCAALL</span>
-          <br />
-          <span className="stretch-font text-[7px]"> AALLTTOONN</span>
+          <span className="tusker-font text-[2rem] leading-[2rem]">CAL</span>
+          <span className="tusker-font text-[1.5rem] leading-[1.5rem] underline underline-offset-3">
+            {" "}
+            ALTON
+          </span>
         </Link>
       </motion.div>
 
@@ -32,7 +37,8 @@ const NavBar = () => {
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{
-          duration: 1}}
+          duration: 1,
+        }}
         className="list-none hidden sm:flex flex-row gap-10"
       >
         {navLinks.map((link) => (
@@ -41,14 +47,17 @@ const NavBar = () => {
             className="text-base cursor-point cursor-pointer"
             onClick={() => setIsActive(link.title)}
           >
-            <a className="stretch-font text-[12px]" href={`#${link.title}`}>
+            <a
+              className="text-[14px] font-light text-white opacity-75"
+              href={`#${link.title}`}
+            >
               {link.title}
             </a>
           </li>
         ))}
       </motion.ul>
 
-      <motion.div
+      {/* <motion.div
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1.5 }}
@@ -70,7 +79,7 @@ const NavBar = () => {
             </span>
           )}
         </button>
-      </motion.div>
+      </motion.div> */}
     </nav>
   );
 };

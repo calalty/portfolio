@@ -10,7 +10,7 @@ const BackgroundCircles = () => {
         borderRadius: ["20%", "20%", "50%", "80%", "20%"],
       }}
       transition={{ duration: 1.5 }}
-      className="absolute flex justify-center items-center -z-20"
+      className="absolute flex justify-center items-center"
     >
       <div className="absolute border border-[#aab2d1] rounded-full h-[100px] w-[100px] opacity-75 animate-ping"></div>
       <div className="absolute border border-[#ffffff25] rounded-full h-[300px] w-[300px]"></div>

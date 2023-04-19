@@ -3,6 +3,10 @@
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      flex: {
+        0: "0 0 100%",
+      },
+    },
   },
 };

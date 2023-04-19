@@ -14,9 +14,26 @@
   src: url('../fonts/stretch-pro.basic.ttf');
 }
 
+@font-face {
+  font-family: 'Tusker Grotesk';
+  src: url('../fonts/TuskerGrotesk-2600Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('../fonts/Migra-Extrabold.ttf');
+}
+
+@font-face {
+  font-family: 'Maelstrom';
+  src: url('../fonts/MaelstromSans.otf');
+}
+
 :root {
-  --font-family-header: 'Stretch Pro';
-  --font-family-basic-header: 'Stretch Basic';
+  --font-family-stretch-header: 'Stretch Pro';
+  --font-family-tusker-header: 'Tusker Grotesk';
+  --font-family-migra-header: 'Migra';
+  --font-family-maelstrom-header: 'Maelstrom';
   --font-family-body: 'Poppins', sans-serif;
   --font-family-handwriting: 'Caveat', cursive;
   --c-neutral-white: #FFFFFF;
@@ -35,11 +52,19 @@
 }
 
 .stretch-font {
-  font-family: var(--font-family-header);
+  font-family: var(--font-family-stretch-header);
 }
 
-.stretch-font-basic {
-  font-family: var(--font-family-basic-header);
+.tusker-font {
+  font-family: var(--font-family-tusker-header);
+}
+
+.migra-font {
+  font-family: var(--font-family-migra-header);
+}
+
+.maelstrom-font {
+  font-family: var(--font-family-maelstrom-header);
 }
 
 .hash-span {
@@ -70,22 +95,15 @@
 }
 
 .green-pink-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: "#aab2d1";
+  background: linear-gradient(90.13deg, #ffffff 1.9%, #aab2d1 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #ffffff 1.9%, #aab2d1 97.5%);
 }
 
-.orange-text-gradient {
-  background: #f12711;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,
-      #f12711,
-      #f5af19);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,
-      #f12711,
-      #f5af19);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.violet-text-gradient {
+  background: "#aab2d1";
+  background: linear-gradient(90.13deg, #ffffff 1.9%, #aab2d1 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #ffffff 1.9%, #aab2d1 97.5%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -136,6 +154,16 @@
   -webkit-text-fill-color: transparent;
 }
 
+.float {
+  animation: float 2s infinite ease alternate;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(20px);
+  }
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
@@ -170,13 +198,18 @@
   }
 }
 
+.painting {
+  background-image: url(../assets/hands.png);
+}
+
+
+
 .wave {
   position: absolute;
   background-image: url(../assets/wave.svg);
   background-repeat: repeat-x;
   bottom: 0;
-  opacity: .25;
-  height: 35%;
+  height: 30%;
 
   &-container {
     cursor: pointer;
