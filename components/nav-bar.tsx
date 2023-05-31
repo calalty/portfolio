@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className="w-full flex items-center px-10 fixed top-0 justify-between mx-auto backdrop-blur-sm bg-[rgba(19,19,19,.15)] border-b border-b-[#ffffff50] z-50 pt-4 pb-3
+      className="w-full absolute top-0 flex items-center px-10 justify-between mx-auto backdrop-blur-sm bg-[rgba(19,19,19,.15)] border-b border-b-[#ffffff50] z-50 pt-4 pb-3
     "
     >
       <motion.div
@@ -18,17 +18,15 @@ const NavBar = () => {
         transition={{ duration: 1 }}
       >
         <Link
-          href={"#"}
+          href={"/"}
           className="flex items-center"
           onClick={() => {
             setIsActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <span className="tusker-font text-[2rem] leading-[2rem]">CAL</span>
-          <span className="tusker-font text-[1.5rem] leading-[1.5rem] underline underline-offset-3">
-            {" "}
-            ALTON
+          <span className="tusker-font underline text-[2rem] leading-[2rem]">
+            Cal Alton
           </span>
         </Link>
       </motion.div>
@@ -49,7 +47,7 @@ const NavBar = () => {
           >
             <a
               className="text-[14px] font-light text-white opacity-75"
-              href={`#${link.title}`}
+              href={`/${link.title}`}
             >
               {link.title}
             </a>

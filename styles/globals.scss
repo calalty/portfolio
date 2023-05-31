@@ -41,14 +41,20 @@
   --c-neutral-yellow: #ffc009;
 }
 
+html {
+  line-height: 1.1;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family-body);
-  scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+body {
+  background-color: #222227;
 }
 
 .stretch-font {
@@ -160,7 +166,7 @@
 
 @keyframes float {
   to {
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 }
 
@@ -202,6 +208,9 @@
   background-image: url(../assets/hands.png);
 }
 
+.pokemon {
+  background-image: url(../assets/pokemon-card.png);
+}
 
 
 .wave {
