@@ -3,7 +3,6 @@ import { useEffect, useMemo, useState } from "react";
 export const useMediaMatch = (query: string): boolean | undefined => {
   const [DOM, setDOM] = useState<Window | undefined>(undefined);
 
-  // Set window on mount to avoid undefined errors
   useEffect(() => {
     setDOM(window);
   }, []);

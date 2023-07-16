@@ -1,38 +1,49 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { peaking } from "@/assets";
 
-type Button = {
-  text: string;
-};
-
-export const Button = ({ text }: Button) => {
-  // const [isHovering, setIsHovering] = useState(false);
+export const Button = ({
+  value,
+  primary,
+  additionalClassName,
+}: {
+  value: string;
+  primary?: boolean;
+  additionalClassName?: string;
+}) => {
+  const marqueeArray = [...Array(10).fill(value)];
+  const [hovered, setHovered] = useState<boolean>(false);
 
   return (
-    <div className="relative flex justify-end mt-4">
-      <div className="flex justify-center">
-        {/* <Image
-          className={`m-auto absolute lg:w-[112px] z-0  ${
-            isHovering
-              ? "-top-[61px] transition-all duration-500"
-              : "top-[0] transition-all duration-500"
-          }`}
-          src={peaking}
-          alt=""
-        /> */}
-        <button
-          className="border border-[#eef1fb] rounded-full py-1 z-10"
-          // onMouseEnter={() => setIsHovering(true)}
-          // onMouseLeave={() => setIsHovering(false)}
+    <button
+      className={`relative inline-block text-[2rem] border ${
+        primary ? "border-[#2b303b]" : "bg-[#2b303b]"
+      } ${additionalClassName} rounded-[1.5rem] px-4 py-1`}
+    >
+      <span
+        className={`${hovered ? "opacity-0" : "opacity-100"} ${
+          primary ? "text-[#2b303b]" : "text-[#f8f8f7]"
+        } transition-all`}
+      >
+        {value}
+      </span>
+      <div className="absolute inset-0 w-full overflow-hidden">
+        <div
+          className="flex relative marquee w-fit"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
         >
-          <span className="uppercase text-[#eef1fb] lg:text-[2.5vw] sm:text-[30px] text-[3vh] mx-2 ">
-            {text}
-          </span>
-        </button>
+          {marqueeArray.map((value, index) => (
+            <span
+              key={index}
+              className={`text-center px-2 py-1 whitespace-nowrap ${
+                primary ? "text-[#2b303b]" : "text-[#f8f8f7]"
+              }`}
+            >
+              {value}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    </button>
   );
 };
 
