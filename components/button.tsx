@@ -14,13 +14,13 @@ export const Button = ({
 
   return (
     <button
-      className={`relative inline-block text-[2rem] border ${
-        primary ? "border-[#2b303b]" : "bg-[#2b303b]"
+      className={`relative inline-block text-[2rem] border text-base sm:text-xl ${
+        primary ? "border-[#2b303b]" : "border-[#aab2d1]"
       } ${additionalClassName} rounded-[1.5rem] px-4 py-1`}
     >
       <span
         className={`${hovered ? "opacity-0" : "opacity-100"} ${
-          primary ? "text-[#2b303b]" : "text-[#f8f8f7]"
+          primary ? "text-[#2b303b]" : "text-[#aab2d1]"
         } transition-all`}
       >
         {value}
@@ -35,7 +35,7 @@ export const Button = ({
             <span
               key={index}
               className={`text-center px-2 py-1 whitespace-nowrap ${
-                primary ? "text-[#2b303b]" : "text-[#f8f8f7]"
+                primary ? "text-[#2b303b]" : "text-[#aab2d1]"
               }`}
             >
               {value}

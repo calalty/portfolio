@@ -7,11 +7,26 @@
   --font-family-heading: "Syne", serif;
   --font-family-body: "Syne", sans-serif;
   --c-neutral-white: #ffffff;
-  --c-neutral-black: #2b303b;
+  --c-neutral-black: #1a2e47;
+  --c-off-white: #f3f2f9;
+  --c-steel-blue: #606887;
+  --c-lavender: #aab2d1;
 }
 
 html {
   line-height: 1.1;
+
+  @media (max-width: 700px) {
+    font-size: 0.75rem;
+  }
+
+  @media (min-width: 1601px) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 701px) and (max-width: 1600px) {
+    font-size: 1.35vw;
+  }
 }
 
 * {
@@ -19,101 +34,9 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family-body);
-  color: var(--c-neutral-black);
   scroll-behavior: smooth;
 }
 
 .type-heading {
   font-family: var(--font-family-heading);
-}
-
-.text-outline {
-  text-shadow: -0.5px -0.5px 0 #2b303b,
-    0.5px -0.5px 0 #2b303b,
-    -1px 1px 0 #2b303b,
-    1px 1px 0 #2b303b;
-}
-
-.noise {
-  position: fixed;
-  z-index: 9999;
-  top: -300%;
-  left: -150%;
-  height: 600%;
-  width: 600%;
-  background: url('../assets/noise.png');
-  -webkit-animation: grain 7s steps(10) infinite;
-  animation: grain 7s steps(10) infinite;
-  background-size: 200px;
-  background-repeat: repeat;
-  opacity: .25;
-  pointer-events: none;
-}
-
-.marquee {
-  opacity: 0;
-  transition: all 100ms;
-
-  &:hover {
-    animation: marquee 3s linear infinite;
-    opacity: 1;
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translate3d(calc(-25% + 1rem), 0, 0);
-  }
-
-  100% {
-    transform: translate3d(calc(-50% + 1rem), 0, 0);
-  }
-}
-
-@keyframes grain {
-
-  0%,
-  100% {
-    transform: translate(0);
-  }
-
-  10% {
-    transform: translate(-5%, -10%);
-  }
-
-  20% {
-    transform: translate(-15%, 5%);
-  }
-
-  30% {
-    transform: translate(7%, -25%);
-  }
-
-  40% {
-    transform: translate(-5%, 25%);
-  }
-
-  50% {
-    transform: translate(-15%, 10%);
-  }
-
-  60% {
-    transform: translate(15%);
-  }
-
-  70% {
-    transform: translateY(15%);
-  }
-
-  80% {
-    transform: translate(3%, 35%);
-  }
-
-  90% {
-    transform: translate(-10%, 10%);
-  }
-}
-
-.painting {
-  background-image: url(../assets/hands.png);
 }

@@ -58,3 +58,25 @@ export const workArray = [
     work: "Seeking a new adventure and an opportunity to learn a new tech stack, I joined Pets at Home. Being part of a greenfield project, I've been involved from the beginning, gaining valuable insights into the complexities of building a new development team and all the necessary components involved.",
   },
 ];
+
+export const socialMedias = [
+  { title: "instagram", url: "#" },
+  { title: "linkedin", url: "#" },
+  { title: "github", url: "#" },
+];
+
+export const myInterests = [
+  "frontend",
+  "artificial intelligence",
+  "backend",
+  "new tech",
+  "new businesses",
+  "startups",
+  "money",
+  "roast potatoes",
+];
+
+export const pageLinks = [
+  { href: "/work", value: "my work", arrow: "→" },
+  { href: "/contact", value: "contact me", arrow: "→" },
+];

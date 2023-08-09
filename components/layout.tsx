@@ -1,12 +1,20 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useState } from "react";
 import NavBar from "./nav-bar";
+import Modal from "./modal";
 
 const Layout = ({ children }: PropsWithChildren) => {
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  const handleOnClick = () => {
+    setToggle(!toggle);
+  };
   return (
     <>
-      <NavBar />
-      {children}
-      <div className="bg-noise noise bg-cover bg-no-repeat bg-center" />
+      <NavBar handleOnClick={handleOnClick} toggle={toggle} />
+      <Modal active={toggle} />
+      {React.Children.map(children, (child) =>
+        React.cloneElement(child, { toggle })
+      )}
     </>
   );
 };

@@ -4,5 +4,6 @@ import pets from "./pets.png";
 import codenation from "./codenation.png";
 import talktalk from "./talktalk.png";
 import hands from "./hands.png";
+import coder from "./coder.png";
 
-export { coolstatue, splash, codenation, pets, talktalk, hands };
+export { coolstatue, splash, codenation, pets, talktalk, hands, coder };

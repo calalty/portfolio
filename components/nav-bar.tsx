@@ -3,12 +3,19 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu } from "./menu";
+import styles from "../styles/nav-bar.module.scss";
+import { Logo } from "./logo";
 
-const NavBar = () => {
+const NavBar = ({
+  handleOnClick,
+  toggle,
+}: {
+  handleOnClick: () => void;
+  toggle: boolean;
+}) => {
   return (
-    <nav className="w-full absolute top-0 flex items-center px-4 justify-between mx-auto z-50 py-4">
+    <nav className={styles.nav}>
       <motion.div
-        className="flex w-full justify-between"
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -20,13 +27,12 @@ const NavBar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          ㋡
+          <Logo additionalClassName={styles.logo} />
         </Link>
-
-        <button>
-          <Menu additionalClassName="stroke-[#2b303b]" />
-        </button>
       </motion.div>
+      <button onClick={handleOnClick}>
+        <Menu transform={toggle} />
+      </button>
     </nav>
   );
 };
