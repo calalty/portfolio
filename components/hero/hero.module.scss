@@ -88,20 +88,21 @@ $lg-bp: 43.75rem;
         margin-top: 2rem;
         letter-spacing: 1px;
         font-size: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--c-off-white);
     }
 
-    ul {
+    .links {
         display: flex;
         font-size: 1.25rem;
         margin-top: 2.5rem;
+        gap: 2rem;
 
         a {
             display: inline-block;
-            margin-right: 2rem;
 
             .arrow {
                 vertical-align: bottom;
-                font-family: sans-serif;
             }
 
             .link {
@@ -131,22 +132,62 @@ $lg-bp: 43.75rem;
             1px 1px 0 var(--c-off-white);
         color: var(--c-steel-blue);
     }
-}
 
+    .socials {
+        margin: 1rem 0 0;
+        gap: 1rem;
+        align-items: center;
+        list-style: none;
+        display: flex;
 
-.interests {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 32rem;
-
-    button {
-        font-size: 1rem;
-        margin: 0 0.5rem 0.5rem 0;
+        &-icon {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
-    @media screen and (max-width: $m-bp) {
-        margin-top: 2.5rem;
+
+    .interests {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 32rem;
+
+        button {
+            font-size: 1rem;
+            margin: 0 0.5rem 0.5rem 0;
+        }
+
+        @media screen and (max-width: $m-bp) {
+            margin-top: 2.5rem;
+        }
+    }
+
+    .link-wrapper {
+        width: fit-content;
+        overflow-x: hidden;
+
+        &:hover {
+            .link-underline {
+                transform: translateX(0%) translateZ(0px);
+            }
+        }
+
+        a {
+            margin-bottom: 0.2rem;
+        }
+    }
+
+    .link-wrapper .link-underline {
+        position: relative;
+        width: 100%;
+        height: 0.075rem;
+        bottom: 0;
+        left: 0;
+        background-color: var(--c-off-white);
+        transform-origin: bottom right;
+        transform: translateX(-101%) translateZ(0px);
+        transition: transform .25s ease-out;
     }
 }

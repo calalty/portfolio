@@ -1,9 +1,7 @@
-import Image from "next/image";
-import styles from "../styles/about.module.scss";
-import { useState } from "react";
+import styles from "./about.module.scss";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 
-export default function About({ toggle }) {
+export default function About() {
   const isMobile = useMediaMatch("(min-width: 43.75rem)");
 
   return (

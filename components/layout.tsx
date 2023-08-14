@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useState } from "react";
-import NavBar from "./nav-bar";
-import Modal from "./modal";
+import NavBar from "./nav-bar/nav-bar";
+import Modal from "./modal/modal";
 
 const Layout = ({ children }: PropsWithChildren) => {
   const [toggle, setToggle] = useState<boolean>(false);

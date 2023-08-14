@@ -13,6 +13,16 @@
   --c-lavender: #aab2d1;
 }
 
+#app[data-current-section='hero'] {
+  background-color: red;
+
+  button {
+    svg {
+      stroke: var(--c-neutral-white);
+    }
+  }
+}
+
 html {
   line-height: 1.1;
 

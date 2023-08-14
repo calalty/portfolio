@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import styles from "./hero.module.scss";
 import { pageLinks } from "@/global";
-import { Portrait } from "@/components/portrait";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 import {
   DESCRIPTION,
@@ -10,63 +8,63 @@ import {
   HELLO_INTRO,
   PETS_AT_HOME,
 } from "./hero-content";
+import { Github, Instagram, Linkedin, Portrait } from "../icons";
 
 export default function Hero({ toggle }) {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
+  const socials = [
+    {
+      name: "instagram",
+      value: <Instagram additionalClassName={styles["socials-icon"]} />,
+      url: "https://www.instagram.com/calalton/?hl=en",
+    },
+    {
+      name: "github",
+      value: <Github additionalClassName={styles["socials-icon"]} />,
+      url: "https://github.com/calalty/",
+    },
+    {
+      name: "linkedin",
+      value: <Linkedin additionalClassName={styles["socials-icon"]} />,
+      url: "https://www.linkedin.com/in/callum-alton-562521160/",
+    },
+  ];
 
   return (
-    <section className={styles.container}>
+    <section data-section='hero' className={styles.container}>
       <div className={styles["primary-content"]}>
         <div className={styles["inner-content"]}>
           <div>
-            <motion.h1
-              initial={{ translateY: -96, opacity: 0 }}
-              animate={{
-                translateY: toggle ? -96 : 0,
-                opacity: toggle ? 0 : 1,
-              }}
-              transition={{
-                duration: 0.5,
-                delay: !toggle && 1,
-              }}
-              className="type-heading"
-            >
+            <h1 className="type-heading">
               <span className={styles["text-outline"]}>{HELLO_INTRO}</span>{" "}
               <br />
               {FULL_NAME}
-            </motion.h1>
-            <motion.p
-              initial={{ translateY: -96, opacity: 0 }}
-              animate={{
-                translateY: toggle ? -96 : 0,
-                opacity: toggle ? 0 : 1,
-              }}
-              transition={{ duration: 0.5, delay: !toggle && 1.05 }}
-            >
+            </h1>
+            <p>
               {DESCRIPTION}
               <span>{PETS_AT_HOME}</span>.
-            </motion.p>
+            </p>
+            <ul className={styles.socials}>
+              {socials.map(({ name, value, url }) => (
+                <li key={name}>
+                  <a href={url}>{value}</a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {!isMobile && <Portrait />}
         </div>
 
-        <ul>
+        <ul className={styles.links}>
           {pageLinks.map(({ href, value, arrow }) => (
-            <motion.li
-              key={value}
-              initial={{ translateY: -96, opacity: 0 }}
-              animate={{
-                translateY: toggle ? -96 : 0,
-                opacity: toggle ? 0 : 1,
-              }}
-              transition={{ duration: 0.5, delay: !toggle && 1.1 }}
-            >
+            <li className={styles["link-wrapper"]} key={value}>
               <Link href={href}>
-                <span className={styles.arrow}>{arrow}</span>
+                <span className={`${styles.arrow} font-sans`}>{arrow}</span>
                 <span className={styles.link}>{value}</span>
               </Link>
-            </motion.li>
+              <div className={styles["link-underline"]}></div>
+            </li>
           ))}
         </ul>
       </div>

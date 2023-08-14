@@ -13,9 +13,7 @@ $lg-bp: 43.75rem;
 
     @media screen and (min-width: $m-bp) {
         height: 100vh;
-
     }
-
 }
 
 .content {
@@ -26,11 +24,11 @@ $lg-bp: 43.75rem;
     padding: 0 7.5rem;
 
     @media screen and (max-width: $lg-bp) {
-        padding: 0 5rem 4rem 5rem;
+        padding: 5rem 4rem;
     }
 
     @media screen and (max-width: $sm-bp) {
-        padding: 0 2.5rem 4rem 2.5rem;
+        padding: 2.5rem 4rem;
     }
 
 }
@@ -48,6 +46,8 @@ $lg-bp: 43.75rem;
             height: 10rem;
             margin-right: 10em;
         }
+
+        margin-bottom: 6vh;
     }
 
     &:last-of-type {
@@ -84,10 +84,6 @@ $lg-bp: 43.75rem;
 
         @media screen and (max-width: $m-bp) {
             width: 100%;
-
-            &:first-of-type {
-                margin-bottom: 6vh;
-            }
         }
     }
 }

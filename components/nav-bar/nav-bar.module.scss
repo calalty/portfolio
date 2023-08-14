@@ -6,7 +6,7 @@ $max-bp: 37.5rem;
     top: 0;
     display: flex;
     align-items: center;
-    padding: 3rem 6rem;
+    padding: 3rem;
     justify-content: space-between;
     margin: 0 auto;
     z-index: 50;
@@ -22,6 +22,6 @@ $max-bp: 37.5rem;
     }
 
     .logo {
-        width: 7rem;
+        width: 5rem;
     }
 }
