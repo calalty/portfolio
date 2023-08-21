@@ -13,10 +13,22 @@
   --c-lavender: #aab2d1;
 }
 
+#app[data-current-section='work'],
 #app[data-current-section='hero'] {
-  background-color: red;
+  header {
+    a {
+      svg {
+        transition: all 0.5s ease 0s;
+        fill: var(--c-neutral-white);
+      }
+    }
+  }
+}
 
+#app[data-current-section='work'] {
   button {
+    color: var(--c-neutral-white);
+
     svg {
       stroke: var(--c-neutral-white);
     }
@@ -24,7 +36,9 @@
 }
 
 html {
+  scroll-behavior: smooth;
   line-height: 1.1;
+  scroll-snap-type: y mandatory;
 
   @media (max-width: 700px) {
     font-size: 0.75rem;

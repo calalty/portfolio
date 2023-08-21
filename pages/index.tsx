@@ -5,11 +5,11 @@ import About from "@/components/about/about";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero toggle={false} />
       <About />
       <Work />
       <Contact />
-    </>
+    </main>
   );
 }

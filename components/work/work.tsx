@@ -8,7 +8,7 @@ export default function Work() {
   const [hoveredWork, setHoveredWork] = useState<number | null>(null);
 
   return (
-    <div id="work" className={styles.wrapper}>
+    <section data-section="work" id="work" className={styles.wrapper}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#f3f2f9"
@@ -62,6 +62,6 @@ export default function Work() {
           <p>{ABOUT_PARAGRAPH}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -10,6 +10,7 @@ $lg-bp: 43.75rem;
     position: relative;
     background: linear-gradient(90deg, var(--c-steel-blue) 67%, var(--c-lavender) 33%);
     color: var(--c-off-white);
+    scroll-snap-align: start;
 
     @media screen and (max-width: $m-bp) {
         flex-direction: column;
@@ -19,7 +20,7 @@ $lg-bp: 43.75rem;
     figure {
         width: 20rem;
         height: 20rem;
-        margin-right: 7.5rem;
+        margin-right: inherit;
         position: relative;
         border: 1px solid var(--c-off-white);
 

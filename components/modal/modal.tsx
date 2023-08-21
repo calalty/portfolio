@@ -13,7 +13,7 @@ const Modal = ({ active }) => {
   ];
 
   return (
-    <div
+    <section
       className={`w-full h-screen fixed top-0 left-0 z-40 pt-32 sm:px-12 md:px-24 xl:px-60 md:pt-60 px-4 flex flex-col duration-500 ${
         active ? "bg-gray-100 pointer-events-auto" : "pointer-events-none"
       } `}
@@ -65,7 +65,7 @@ const Modal = ({ active }) => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

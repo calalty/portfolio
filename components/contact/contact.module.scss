@@ -10,6 +10,7 @@ $lg-bp: 43.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-snap-align: start;
 
     @media screen and (min-width: $m-bp) {
         height: 100vh;

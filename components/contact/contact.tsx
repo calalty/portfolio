@@ -7,8 +7,8 @@ export default function Contact() {
   });
 
   return (
-    <div id="contact" className={styles.container} data-section="contact">
-      <section className={styles.contact}>
+    <section id="contact" className={styles.container} data-section="contact">
+      <div className={styles.contact}>
         <h2>CONTACT ME</h2>
 
         <p>Got any questions, or just want to say hello? Fire away!</p>
@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
           </button>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

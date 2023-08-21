@@ -1,14 +1,13 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 export default function Document() {
   return (
     <Html lang="en">
       <Head />
       <body>
-        <div id="app" data-current-section="hero">
-          <Main />
-          <NextScript />
-        </div>
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );

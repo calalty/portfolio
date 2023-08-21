@@ -5,7 +5,7 @@ export default function About() {
   const isMobile = useMediaMatch("(min-width: 43.75rem)");
 
   return (
-    <section className={styles.container}>
+    <section id="about" data-section="about" className={styles.container}>
       <div className={styles.content}>
         <article className={styles.description}>
           <div>

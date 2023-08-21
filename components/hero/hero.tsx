@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./hero.module.scss";
-import { pageLinks } from "@/global";
+import { pageLinks, socialMedias } from "@/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 import {
   DESCRIPTION,
@@ -9,6 +9,7 @@ import {
   PETS_AT_HOME,
 } from "./hero-content";
 import { Github, Instagram, Linkedin, Portrait } from "../icons";
+import { PageNavigation } from "../page-navigation/page-navigation";
 
 export default function Hero({ toggle }) {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
@@ -31,7 +32,7 @@ export default function Hero({ toggle }) {
   ];
 
   return (
-    <section data-section='hero' className={styles.container}>
+    <section id="hero" data-section="hero" className={styles.container}>
       <div className={styles["primary-content"]}>
         <div className={styles["inner-content"]}>
           <div>
@@ -44,29 +45,25 @@ export default function Hero({ toggle }) {
               {DESCRIPTION}
               <span>{PETS_AT_HOME}</span>.
             </p>
-            <ul className={styles.socials}>
-              {socials.map(({ name, value, url }) => (
-                <li key={name}>
-                  <a href={url}>{value}</a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {!isMobile && <Portrait />}
         </div>
 
-        <ul className={styles.links}>
-          {pageLinks.map(({ href, value, arrow }) => (
-            <li className={styles["link-wrapper"]} key={value}>
-              <Link href={href}>
-                <span className={`${styles.arrow} font-sans`}>{arrow}</span>
-                <span className={styles.link}>{value}</span>
-              </Link>
-              <div className={styles["link-underline"]}></div>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <PageNavigation />
+          <ul className={styles.links}>
+            {pageLinks.map(({ href, value }) => (
+              <li className={styles["link-wrapper"]} key={value}>
+                <Link href={href}>
+                  <span className={`${styles.arrow} font-sans`}>→</span>
+                  <span className={styles.link}>{value}</span>
+                </Link>
+                <div className={styles["link-underline"]}></div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       {isMobile && (

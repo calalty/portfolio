@@ -1,32 +1,58 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
+import { externalPageLinks, socialMedias } from "@/global";
 
-const NavBar = ({
-  handleOnClick,
-  toggle,
-}: {
-  handleOnClick: () => void;
-  toggle: boolean;
-}) => {
+const NavBar = () => {
+  const [toggle, setToggle] = useState<boolean>(false);
+
+  const handleOnClick = () => {
+    setToggle(!toggle);
+  };
+
   return (
-    <nav className={styles.nav}>
-      <div>
-        <Link
-          href={"/"}
-          className="flex items-center text-3xl type-heading uppercase font-black text-outline text-[#f3f4f6]"
-          onClick={() => {
-            window.scrollTo(0, 0);
-          }}
-        >
-          <Logo additionalClassName={styles.logo} />
-        </Link>
-      </div>
+    <header className={styles.header}>
+      <Link
+        className={styles["home-nav"]}
+        href={"/"}
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
+        <Logo additionalClassName={styles.logo} />
+      </Link>
+
       <button onClick={handleOnClick}>
         <Menu transform={toggle} />
       </button>
-    </nav>
+
+      <nav className={`${styles.nav} ${toggle && styles.open}`}>
+        <div className={styles.info}>
+          <ul className={styles["external-pages"]}>
+            {externalPageLinks.map(({ href, value }) => (
+              <li key={value}>
+                <a href={href}>
+                  <span className="font-sans">→</span> {value}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className={styles.contact}>
+            <span className={styles.socials}>SOCIALS</span>
+            <ul className={styles["social-medias"]}>
+              {socialMedias.map(({ title, url }) => (
+                <li key={title}>
+                  <a href={url}>
+                    <span className="font-sans">↗</span> {title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 
