@@ -8,28 +8,11 @@ import {
   HELLO_INTRO,
   PETS_AT_HOME,
 } from "./hero-content";
-import { Github, Instagram, Linkedin, Portrait } from "../icons";
+import { Portrait } from "../icons";
 import { PageNavigation } from "../page-navigation/page-navigation";
 
 export default function Hero({ toggle }) {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
-  const socials = [
-    {
-      name: "instagram",
-      value: <Instagram additionalClassName={styles["socials-icon"]} />,
-      url: "https://www.instagram.com/calalton/?hl=en",
-    },
-    {
-      name: "github",
-      value: <Github additionalClassName={styles["socials-icon"]} />,
-      url: "https://github.com/calalty/",
-    },
-    {
-      name: "linkedin",
-      value: <Linkedin additionalClassName={styles["socials-icon"]} />,
-      url: "https://www.linkedin.com/in/callum-alton-562521160/",
-    },
-  ];
 
   return (
     <section id="hero" data-section="hero" className={styles.container}>

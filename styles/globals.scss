@@ -16,10 +16,16 @@
 #app[data-current-section='work'],
 #app[data-current-section='hero'] {
   header {
-    a {
-      svg {
-        transition: all 0.5s ease 0s;
-        fill: var(--c-neutral-white);
+    svg {
+      path {
+        &:first-of-type {
+          fill: var(--c-neutral-white);
+          opacity: 0.75;
+        }
+
+        &:last-of-type {
+          fill: var(--c-off-white);
+        }
       }
     }
   }

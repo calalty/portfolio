@@ -83,12 +83,11 @@ export const pageLinks = [
 ];
 
 export const externalPageLinks = [
-  { href: "/", value: "My Projects" },
-  { href: "/", value: "My Resume" },
+  { href: "/resume", value: "My Resume" },
   { href: "/", value: "My Mail" },
 ];
 
-export const sections = ["hero", "about", "work", "contact"];
+export const sections = ["hero", "about", "work", "contact", "footer"];
 
 export const experienceData: ExperienceType[] = [
   {

@@ -17,13 +17,15 @@ $max-bp: 37.5rem;
 
     .home-nav {
         display: flex;
-        width: 100%;
+        width: fit-content;
         justify-content: space-between;
+
+        svg {
+            width: 2rem;
+        }
     }
 
-    .logo {
-        width: 5rem;
-    }
+
 
     .nav {
         top: 1.5rem;
@@ -47,7 +49,7 @@ $max-bp: 37.5rem;
             height: 100%;
             content: '';
             position: absolute;
-            background-color: #fff;
+            background-color: var(--c-neutral-white);
             transform-origin: top right
         }
 
@@ -81,11 +83,6 @@ $max-bp: 37.5rem;
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
-
-        .socials {
-            letter-spacing: 0.15rem;
-            color: var(--c-lavender);
-        }
     }
 
     .social-medias {
@@ -113,5 +110,10 @@ $max-bp: 37.5rem;
 
     .info {
         margin-top: 2.5rem;
+    }
+
+    .modal-title {
+        letter-spacing: 0.15rem;
+        color: var(--c-lavender);
     }
 }

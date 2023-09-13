@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
 import { externalPageLinks, socialMedias } from "@/global";
+import { useActiveSection } from "@/hooks/use-active-section/use-active-section";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
+  const { activeSectionIndex } = useActiveSection();
 
   const handleOnClick = () => {
     setToggle(!toggle);
@@ -20,7 +22,7 @@ const NavBar = () => {
           window.scrollTo(0, 0);
         }}
       >
-        <Logo additionalClassName={styles.logo} />
+        <Logo />
       </Link>
 
       <button onClick={handleOnClick}>
@@ -29,6 +31,7 @@ const NavBar = () => {
 
       <nav className={`${styles.nav} ${toggle && styles.open}`}>
         <div className={styles.info}>
+          <span className={styles["modal-title"]}>THINGS</span>
           <ul className={styles["external-pages"]}>
             {externalPageLinks.map(({ href, value }) => (
               <li key={value}>
@@ -39,7 +42,7 @@ const NavBar = () => {
             ))}
           </ul>
           <div className={styles.contact}>
-            <span className={styles.socials}>SOCIALS</span>
+            <span className={styles["modal-title"]}>SOCIALS</span>
             <ul className={styles["social-medias"]}>
               {socialMedias.map(({ title, url }) => (
                 <li key={title}>
