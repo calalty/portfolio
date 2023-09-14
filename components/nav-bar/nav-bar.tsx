@@ -23,7 +23,7 @@ const NavBar = () => {
         <span className={styles["modal-title"]}>{title}</span>
         <ul
           className={
-            isSocialLinks ? styles["social-medias"] : styles["external-pages"]
+            isSocialLinks ? styles["social-medias"] : styles["pages"]
           }
         >
           {links.map(({ href, value }) => (

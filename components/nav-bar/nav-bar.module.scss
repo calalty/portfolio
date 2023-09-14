@@ -25,8 +25,6 @@ $max-bp: 37.5rem;
         }
     }
 
-
-
     .nav {
         top: 1.5rem;
         right: 1.5rem;
@@ -64,7 +62,6 @@ $max-bp: 37.5rem;
         }
     }
 
-
     .open {
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
             rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
@@ -79,7 +76,7 @@ $max-bp: 37.5rem;
         }
     }
 
-    .contact {
+    .contact, .social {
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
@@ -97,8 +94,7 @@ $max-bp: 37.5rem;
         position: relative;
     }
 
-    .external-pages {
-
+    .pages {
         li {
             margin-top: 1rem;
         }
