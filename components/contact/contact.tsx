@@ -1,19 +1,60 @@
 import styles from "./contact.module.scss";
-import { Controller, useForm } from "react-hook-form";
+import {
+  Controller,
+  FieldValues,
+  RegisterOptions,
+  useForm,
+} from "react-hook-form";
 import emailjs from "emailjs-com";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import {
+  CONTACT_EMAIL,
+  CONTACT_MESSAGE,
+  CONTACT_NAME,
+  CONTACT_SUBMIT,
+  CONTACT_SUBTITLE,
+  CONTACT_TITLE,
+  INVALID_EMAIL,
+  REQUIRED_FIELDS,
+} from "@/contents/global";
+import { REGEX_EMAIL_VALIDATION } from "@/global/pattern";
 
 export default function Contact() {
   const { control } = useForm({
     reValidateMode: "onSubmit",
   });
   const form = useRef();
-
   const [status, setStatus] = useState(null);
+
+  const renderController = (
+    name: string,
+    label: string,
+    additionalRules?: RegisterOptions<FieldValues, string>
+  ) => (
+    <Controller
+      name={name}
+      control={control}
+      rules={{
+        required: { value: true, message: REQUIRED_FIELDS },
+        ...additionalRules,
+      }}
+      render={({ field }) => (
+        <div className={styles["input-group"]}>
+          <label>{label}</label>
+          <input
+            className={styles.input}
+            value={field.value}
+            name={field.name}
+            required
+          />
+        </div>
+      )}
+    />
+  );
+
   const sendEmail = (e) => {
     e.preventDefault();
     e.target.reset();
-
     setStatus("sending");
 
     emailjs
@@ -32,66 +73,26 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.container} data-section="contact">
       <div className={styles.contact}>
-        <h2>CONTACT ME</h2>
-
-        <p>Got any questions, or just want to say hello? Fire away!</p>
+        <h2>{CONTACT_TITLE}</h2>
+        <p>{CONTACT_SUBTITLE}</p>
 
         <form ref={form} className={styles.root} onSubmit={sendEmail}>
           <div className={styles["personal-details"]}>
-            <Controller
-              name="name"
-              control={control}
-              rules={{ required: true }}
-              render={({ field }) => (
-                <div className={styles["input-group"]}>
-                  <label>NAME</label>
-                  <input
-                    className={styles.input}
-                    value={field.value}
-                    name={field.name}
-                    required
-                  />
-                </div>
-              )}
-            />
-            <Controller
-              name="email"
-              control={control}
-              rules={{ required: true }}
-              render={({ field }) => (
-                <div className={styles["input-group"]}>
-                  <label>E-MAIL ADDRESS</label>
-                  <input
-                    className={styles.input}
-                    value={field.value}
-                    name={field.name}
-                    required
-                  />
-                </div>
-              )}
-            />
+            {renderController("name", CONTACT_NAME)}
+            {renderController("email", CONTACT_EMAIL, {
+              pattern: {
+                value: REGEX_EMAIL_VALIDATION,
+                message: INVALID_EMAIL,
+              },
+            })}
           </div>
 
-          <Controller
-            name="message"
-            control={control}
-            rules={{ required: true }}
-            render={({ field }) => (
-              <div className={styles["input-group"]}>
-                <label>MESSAGE</label>
-                <input
-                  className={styles.input}
-                  value={field.value}
-                  name={field.name}
-                  required
-                />
-              </div>
-            )}
-          />
+          {renderController("message", CONTACT_MESSAGE)}
+
           <button className={styles["submit-btn"]}>
-            <div>
-              <span className="font-sans">→</span> FIRE AWAY
-            </div>
+            <p>
+              <span className="font-sans">→</span> {CONTACT_SUBMIT}
+            </p>
           </button>
         </form>
 

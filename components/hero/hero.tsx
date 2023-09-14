@@ -1,13 +1,13 @@
 import Link from "next/link";
 import styles from "./hero.module.scss";
-import { pageLinks, socialMedias } from "@/global";
+import { pageLinks } from "@/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 import {
   DESCRIPTION,
   FULL_NAME,
   HELLO_INTRO,
   PETS_AT_HOME,
-} from "./hero-content";
+} from "../../contents/global";
 import { Portrait } from "../icons";
 import { PageNavigation } from "../page-navigation/page-navigation";
 
@@ -20,7 +20,7 @@ export default function Hero({ toggle }) {
         <div className={styles["inner-content"]}>
           <div>
             <h1 className="type-heading">
-              <span className={styles["text-outline"]}>{HELLO_INTRO}</span>{" "}
+              <span className={styles["text-outline"]}>{HELLO_INTRO}</span>
               <br />
               {FULL_NAME}
             </h1>

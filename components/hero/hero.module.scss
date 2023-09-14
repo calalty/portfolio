@@ -17,6 +17,12 @@ $lg-bp: 43.75rem;
         background: var(--c-steel-blue);
     }
 
+    @media screen and (max-width: $m-bp) {
+        flex-direction: column;
+        background: var(--c-steel-blue);
+    }
+
+
     figure {
         width: 20rem;
         height: 20rem;
@@ -56,6 +62,7 @@ $lg-bp: 43.75rem;
         align-items: center;
         justify-content: center;
         background: var(--c-lavender);
+
     }
 }
 

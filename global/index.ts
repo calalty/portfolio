@@ -61,9 +61,9 @@ export const workArray = [
 ];
 
 export const socialMedias = [
-  { title: "IG", url: "#" },
-  { title: "LI", url: "#" },
-  { title: "GH", url: "#" },
+  { value: "IG", href: "#" },
+  { value: "LI", href: "#" },
+  { value: "GH", href: "#" },
 ];
 
 export const myInterests = [
@@ -82,12 +82,12 @@ export const pageLinks = [
   { href: "/contact", value: "Contact Me" },
 ];
 
-export const externalPageLinks = [
+export const socials = [
   { href: "/resume", value: "My Resume" },
   { href: "/", value: "My Mail" },
 ];
 
-export const sections = ["hero", "about", "work", "contact", "footer"];
+export const sections = ["hero", "about", "work", "contact"];
 
 export const experienceData: ExperienceType[] = [
   {
