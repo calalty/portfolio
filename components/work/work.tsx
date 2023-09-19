@@ -2,7 +2,7 @@ import { workArray } from "@/global";
 import React, { useState } from "react";
 import styles from "./work.module.scss";
 import { WorkIllustration } from "../icons";
-import { ABOUT_PARAGRAPH, OVER_THE_YEARS } from "./work-content";
+import { ABOUT_PARAGRAPH, OVER_THE_YEARS } from "@/contents/global";
 
 export function WorkItem({ title, description, index }) {
   const [hoveredWork, setHoveredWork] = useState<number | null>(null);
@@ -22,11 +22,11 @@ export function WorkItem({ title, description, index }) {
       <a href={`/${title}`}>
         <div className={styles.links}>
           <div>
-            <h4 className={`${showArrowStyle} ${styles.arrow} font-sans`}>→</h4>
+            <h3 className={`${showArrowStyle} ${styles.arrow} font-sans`}>→</h3>
           </div>
-          <h4 className={`${showHeadingStyle} ${styles.heading} type-heading`}>
+          <h3 className={`${showHeadingStyle} ${styles.heading} type-heading`}>
             {title}
-          </h4>
+          </h3>
           <p>{description}</p>
         </div>
       </a>

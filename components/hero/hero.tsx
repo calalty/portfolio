@@ -2,12 +2,7 @@ import Link from "next/link";
 import styles from "./hero.module.scss";
 import { pageLinks } from "@/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
-import {
-  DESCRIPTION,
-  FULL_NAME,
-  HELLO_INTRO,
-  PETS_AT_HOME,
-} from "../../contents/global";
+import { DESCRIPTION, FULL_NAME, HELLO_INTRO } from "../../contents/global";
 import { Portrait } from "../icons";
 import { PageNavigation } from "../page-navigation/page-navigation";
 
@@ -24,10 +19,7 @@ export default function Hero({ toggle }) {
               <br />
               {FULL_NAME}
             </h1>
-            <p>
-              {DESCRIPTION}
-              <span>{PETS_AT_HOME}</span>.
-            </p>
+            <p>{DESCRIPTION}</p>
           </div>
 
           {!isMobile && <Portrait />}

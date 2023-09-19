@@ -1,4 +1,6 @@
-$max-bp: 37.5rem;
+$m-bp: 37.5rem;
+$sm-bp: 25rem;
+$lg-bp: 43.75rem;
 
 .header {
     width: 100%;
@@ -11,8 +13,9 @@ $max-bp: 37.5rem;
     margin: 0 auto;
     z-index: 50;
 
-    @media screen and (max-width: $max-bp) {
-        padding: 1rem 2rem;
+    @media screen and (max-width: $m-bp) {
+        padding: 1.5rem 3rem;
+        position: absolute;
     }
 
     .home-nav {
@@ -22,10 +25,15 @@ $max-bp: 37.5rem;
 
         svg {
             width: 2rem;
+            z-index: 999;
         }
     }
 
-    .nav {
+    nav {
+        color: var(--c-steel-blue);
+    }
+
+    .nav-menu {
         top: 1.5rem;
         right: 1.5rem;
         width: 20rem;
@@ -35,7 +43,6 @@ $max-bp: 37.5rem;
         padding: 3rem;
         transition: opacity 0.4s,
             box-shadow 0.4s;
-        color: var(--c-steel-blue);
 
         &::before {
             top: 0;
@@ -60,23 +67,59 @@ $max-bp: 37.5rem;
                 transform: scaleX(.3) scaleY(.27)
             }
         }
+
+        &.open {
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+            &::before {
+                transform: scale(1);
+            }
+
+            &>* {
+                position: relative;
+            }
+        }
     }
 
-    .open {
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    .nav-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--c-neutral-white);
+        font-size: 2.2rem;
+        transition: opacity .3s,
+            visibility .3s;
+        justify-content: space-around;
 
-        &::before {
-            transform: scale(1);
+        &.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
 
-        &>* {
-            position: relative;
+        &:not(.open) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .info {
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 100vh;
         }
     }
 
-    .contact, .social {
+    .contact,
+    .social {
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
@@ -92,6 +135,13 @@ $max-bp: 37.5rem;
     button {
         z-index: 999;
         position: relative;
+
+        svg {
+            @media screen and (max-width: $lg-bp) {
+                stroke: var(--c-neutral-white);
+                width: 3rem;
+            }
+        }
     }
 
     .pages {
@@ -111,5 +161,25 @@ $max-bp: 37.5rem;
     .modal-title {
         letter-spacing: 0.15rem;
         color: var(--c-lavender);
+    }
+}
+
+.nav-open {
+    button {
+        svg {
+            stroke: var(--c-steel-blue);
+        }
+    }
+
+    svg {
+        path {
+            &:first-of-type {
+                fill: var(--c-steel-blue) !important;
+            }
+
+            &:last-of-type {
+                fill: var(--c-lavender) !important;
+            }
+        }
     }
 }

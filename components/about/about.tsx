@@ -17,7 +17,7 @@ export default function About() {
         <h2>{title}</h2>
         <p>{paragraph}</p>
       </div>
-      {isMobile && type === "life" ? <PatternV1 /> : <PatternV2 />}
+      {isMobile && <>{type === "life" ? <PatternV1 /> : <PatternV2 />}</>}
     </article>
   );
 

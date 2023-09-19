@@ -73,7 +73,7 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.container} data-section="contact">
       <div className={styles.contact}>
-        <h2>{CONTACT_TITLE}</h2>
+        <h4>{CONTACT_TITLE}</h4>
         <p>{CONTACT_SUBTITLE}</p>
 
         <form ref={form} className={styles.root} onSubmit={sendEmail}>

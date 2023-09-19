@@ -4,9 +4,11 @@ import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
 import { pageLinks, socialMedias } from "@/global";
 import { SOCIALS_TITLE, THINGS_TITLE } from "@/contents/global";
+import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
+  const isMobile = useMediaMatch("(min-width: 43.75rem)");
 
   const handleOnClick = () => {
     setToggle(!toggle);
@@ -22,9 +24,7 @@ const NavBar = () => {
       <div className={isSocialLinks ? styles.social : styles.contact}>
         <span className={styles["modal-title"]}>{title}</span>
         <ul
-          className={
-            isSocialLinks ? styles["social-medias"] : styles["pages"]
-          }
+          className={isSocialLinks ? styles["social-medias"] : styles["pages"]}
         >
           {links.map(({ href, value }) => (
             <li key={value}>
@@ -40,7 +40,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${toggle && styles["nav-open"]}`}>
       <Link
         className={styles["home-nav"]}
         href={"/"}
@@ -55,7 +55,12 @@ const NavBar = () => {
         <Menu transform={toggle} />
       </button>
 
-      <nav className={`${styles.nav} ${toggle && styles.open}`}>
+      <nav
+        aria-hidden={toggle}
+        className={`${isMobile ? styles["nav-menu"] : styles["nav-modal"]} ${
+          toggle && styles.open
+        }`}
+      >
         <div className={styles.info}>
           {renderNavSection(THINGS_TITLE, pageLinks, "things")}
           {renderNavSection(SOCIALS_TITLE, socialMedias, "social")}

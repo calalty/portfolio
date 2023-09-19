@@ -2,8 +2,7 @@
 export const FULL_NAME = "Callum Alton.";
 export const HELLO_INTRO = "Hi, I am";
 export const DESCRIPTION =
-  "A software engineer from Manchester currently working with ";
-export const PETS_AT_HOME = "Pets at Home";
+  "I take pride in crafting robust and scalable software solutions that deliver exceptional user experiences";
 
 // About content
 export const LIFE_TITLE = "LIFE";
@@ -57,3 +56,8 @@ export const EXPERIENCE_PARAGRAPH = `I have worked in a small number of diverse 
   early stages of my career, I have adeptly navigated through
   various complexities and technologies, each contributing to my
   growth as an accomplished front-end developer:`;
+
+// Work content
+export const OVER_THE_YEARS = "OVER THE YEARS,";
+export const ABOUT_PARAGRAPH =
+  "Throughout my professional journey, I've had the privilege of contributing to various organizations and projects, each playing a crucial role in shaping my skills and expertise. My commitment to excellence in software engineering has taken me on a path filled with exciting challenges and valuable experiences. Here, you'll find a chronological overview of the companies and roles I've been a part of, highlighting key accomplishments and insights gained along the way.";

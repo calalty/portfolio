@@ -1,3 +1,5 @@
+$lg-bp: 43.75rem;
+
 .page-navigation {
     z-index: 999;
     display: flex;
@@ -5,6 +7,10 @@
     margin-top: -2.25rem;
     color: var(--c-steel-blue);
     right: 3.35rem;
+
+    @media screen and (max-width: $lg-bp) {
+        display: none;
+    }
 
     ul {
         margin: 0;

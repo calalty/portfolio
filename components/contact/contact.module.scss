@@ -1,5 +1,5 @@
 $m-bp: 37.5rem;
-$sm-bp: 25rem;
+$sm-bp: 25.875rem;
 $lg-bp: 43.75rem;
 
 .container {
@@ -10,10 +10,13 @@ $lg-bp: 43.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
 
     @media screen and (min-width: $m-bp) {
         height: 100vh;
+    }
+
+    @media screen and (min-width: $lg-bp) {
+        scroll-snap-align: start;
     }
 }
 
@@ -23,7 +26,7 @@ $lg-bp: 43.75rem;
     padding: 0 7.5rem;
     text-align: center;
 
-    h2 {
+    h4 {
         font-weight: 700;
         width: 100%;
         overflow: hidden;
@@ -36,13 +39,9 @@ $lg-bp: 43.75rem;
     }
 
     @media screen and (max-width: $lg-bp) {
-        padding: 5rem 4rem;
+        padding: 6rem 4rem;
         width: 100%;
         flex-direction: column-reverse;
-    }
-
-    @media screen and (max-width: $sm-bp) {
-        padding: 2.5rem 4rem;
     }
 }
 
@@ -57,7 +56,7 @@ $lg-bp: 43.75rem;
 }
 
 .root {
-    margin-top: 4rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,6 +73,10 @@ $lg-bp: 43.75rem;
         display: flex;
         gap: 1rem;
         margin-bottom: 1rem;
+
+        @media screen and (max-width: $sm-bp) {
+            flex-direction: column;
+        }
     }
 
     label {
@@ -96,6 +99,10 @@ $lg-bp: 43.75rem;
         background-color: var(--c-neutral-white);
         box-shadow: inset 0 0 0 0 var(--c-steel-blue);
         transition: ease-out 0.4s;
+
+        @media screen and (max-width: $sm-bp) {
+            min-width: 100%;
+        }
 
         &:hover {
             box-shadow: inset 24rem 0 0 0 var(--c-steel-blue);
