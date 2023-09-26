@@ -1,11 +1,12 @@
 import React from "react";
-import styles from "./resume-profile.module.scss";
+import styles from "./resume-details.module.scss";
 import { Download, Linkedin } from "../icons";
 import {
   EXPERIENCE_PARAGRAPH,
   EXPERIENCE_TITLE,
   PROFILE_DESCRIPTION,
   PROFILE_SECOND_PARAGRAPH,
+  PROFILE_TITLE,
 } from "@/contents/global";
 import { Experience } from "../experience/experience";
 import { experienceData } from "@/global";
@@ -27,7 +28,7 @@ export const ResumeDetails = () => {
       <div className={styles["resume-details-wrapper"]}>
         <section className={styles.profile}>
           <div>
-            <h2>{PROFILE_SECOND_PARAGRAPH}</h2>
+            <h2>{PROFILE_TITLE}</h2>
           </div>
           <p>{PROFILE_DESCRIPTION}</p>
           <br />

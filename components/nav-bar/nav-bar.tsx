@@ -2,21 +2,21 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
-import { pageLinks, socialMedias } from "@/global";
-import { SOCIALS_TITLE, THINGS_TITLE } from "@/contents/global";
+import { mail, pageLinks, socialMedias } from "@/global";
+import { MAIL_TITLE, SOCIALS_TITLE, THINGS_TITLE } from "@/contents/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   const isMobile = useMediaMatch("(min-width: 43.75rem)");
-
+  const { href, value } = mail;
   const handleOnClick = () => {
     setToggle(!toggle);
   };
 
   const renderNavSection = (
     title: string,
-    links: { href: string; value: string }[],
+    links: { href: string; value: string; target?: string }[],
     type: "social" | "things"
   ) => {
     const isSocialLinks = type === "social";
@@ -26,9 +26,9 @@ const NavBar = () => {
         <ul
           className={isSocialLinks ? styles["social-medias"] : styles["pages"]}
         >
-          {links.map(({ href, value }) => (
+          {links.map(({ href, value, target }) => (
             <li key={value}>
-              <a href={href}>
+              <a href={href} target={target}>
                 <span className="font-sans"> {isSocialLinks ? "↗" : "→"}</span>
                 {value}
               </a>
@@ -63,6 +63,13 @@ const NavBar = () => {
       >
         <div className={styles.info}>
           {renderNavSection(THINGS_TITLE, pageLinks, "things")}
+          <div className={styles.mail}>
+            <span className={styles["modal-title"]}>{MAIL_TITLE}</span>
+            <a target="_blank" rel="nofollow" href={href}>
+              <span className="font-sans">→</span>
+              {value}
+            </a>
+          </div>
           {renderNavSection(SOCIALS_TITLE, socialMedias, "social")}
         </div>
       </nav>

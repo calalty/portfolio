@@ -41,12 +41,23 @@ export default function Contact() {
       render={({ field }) => (
         <div className={styles["input-group"]}>
           <label>{label}</label>
-          <input
-            className={styles.input}
-            value={field.value}
-            name={field.name}
-            required
-          />
+
+          {name === "message" ? (
+            <textarea
+              value={field.value}
+              name={field.name}
+              required
+              rows={5}
+              minLength={30}
+            ></textarea>
+          ) : (
+            <input
+              className={styles.input}
+              value={field.value}
+              name={field.name}
+              required
+            />
+          )}
         </div>
       )}
     />

@@ -16,7 +16,7 @@ $lg-bp: 43.75rem;
     }
 
     @media screen and (min-width: $lg-bp) {
-        scroll-snap-align: start;
+        scroll-snap-align: end;
     }
 }
 
@@ -85,16 +85,25 @@ $lg-bp: 43.75rem;
         color: var(--c-lavender);
     }
 
-    input {
-        height: 4rem;
-        padding: 0 1.25rem;
+    input,
+    textarea {
         border: 1px solid var(--c-lavender);
+    }
+
+    textarea {
+        line-height: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    input {
+        padding: 0 1.25rem;
+        height: 4rem;
     }
 
     .submit-btn {
         margin-top: 3rem;
         min-width: 24rem;
-        padding: 1.25em 3em;
+        padding: 1rem 2rem;
         border: 1px solid var(--c-steel-blue);
         background-color: var(--c-neutral-white);
         box-shadow: inset 0 0 0 0 var(--c-steel-blue);

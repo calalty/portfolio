@@ -1,9 +1,10 @@
 import { sections } from "@/global";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 type Section = {
   activeSectionValue: string;
-  activeSectionIndex: number;
+  activeSectionIndex?: number;
 };
 
 export const useActiveSection = () => {
@@ -11,6 +12,8 @@ export const useActiveSection = () => {
     activeSectionValue: sections[0],
     activeSectionIndex: 0,
   });
+  const router = useRouter();
+  const { pathname } = router;
 
   const getActiveSection = () => {
     const viewportHeight = window.innerHeight;
@@ -38,16 +41,26 @@ export const useActiveSection = () => {
   };
 
   useEffect(() => {
-    function handleScroll() {
-      const newActiveSection = getActiveSection();
-      setActiveSection(newActiveSection);
+    if (pathname === "/work") {
+      return setActiveSection({ activeSectionValue: "work" });
     }
+
+    if (pathname === "/contact") {
+      return setActiveSection({ activeSectionValue: "c" });
+    }
+
+    const handleScroll = () => {
+      if (pathname === "/") {
+        const newActiveSection = getActiveSection();
+        setActiveSection(newActiveSection);
+      }
+    };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [pathname]);
 
   return activeSection;
 };

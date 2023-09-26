@@ -61,9 +61,9 @@ export const workArray = [
 ];
 
 export const socialMedias = [
-  { value: "IG", href: "#" },
-  { value: "LI", href: "#" },
-  { value: "GH", href: "#" },
+  { value: "IG", href: "https://www.instagram.com/calalton/?hl=en" },
+  { value: "LI", href: "https://www.linkedin.com/in/callum-alton-562521160/" },
+  { value: "GH", href: "https://github.com/calalty" },
 ];
 
 export const myInterests = [
@@ -78,14 +78,12 @@ export const myInterests = [
 ];
 
 export const pageLinks = [
+  { href: "/resume", value: "My Resume", target: "_blank" },
   { href: "/work", value: "My Work" },
   { href: "/contact", value: "Contact Me" },
 ];
 
-export const socials = [
-  { href: "/resume", value: "My Resume" },
-  { href: "/", value: "My Mail" },
-];
+export const mail = { href: "mailto:hello@calalton.com", value: "My Mail" };
 
 export const sections = ["hero", "about", "work", "contact"];
 
@@ -97,34 +95,34 @@ export const experienceData: ExperienceType[] = [
     endDate: "Present",
     responsibilities: [
       {
-        title: "Immersed in Project Evolution",
+        title: "Project Involvement",
         description:
-          "As an integral part of a greenfield project, I've had the privilege of witnessing its inception and evolution, gaining profound insights into its foundational processes and witnessing its completion.",
+          "I played a significant role in a new project right from its inception. This experience allowed me to gain valuable insights into the entire development process, from its early stages to its successful completion.",
       },
       {
-        title: "Crafting Complex Components with Finesse",
+        title: "UI Component Design",
         description:
-          "My role involved architecting intricate components within the Storybook framework, employing the atomic design methodology. Notably, I've had the pleasure of creating high-complexity organisms, showcasing my mastery in constructing sophisticated UI elements.",
+          "I had the responsibility of creating intricate user interface components using the Storybook framework. This involved designing complex elements that greatly enhanced the overall user experience.",
       },
       {
-        title: "Mastering Next.js for Optimal Project Structure",
+        title: "Next.js Implementation",
         description:
-          "I've undertaken an immersive exploration of Next.js, strategically molding aspects of the project's structure to harness its routing capabilities. I've orchestrated server-side rendering in instances where it can enhance performance, SEO, and user engagement, thereby elevating the overall digital experience.",
+          "I utilized Next.js to optimize the project's structure. This strategic approach improved the project's performance, SEO ranking, and user engagement, resulting in a more satisfying digital experience.",
       },
       {
-        title: "Collaborative Leadership and Backend Synergy",
+        title: "Collaboration and Data Integration",
         description:
-          "Operating closely with the Director of Development, who oversees a holistic spectrum encompassing backend, web, app, and architecture, I singularly undertook the development of the product page under stringent timelines. My proactive collaboration with backend developers ensured seamless data integration, optimizing frontend data consumption and harmonizing it effectively with the Product Information Management (PIM) system.",
+          "I worked closely with the Director of Development and backend developers to ensure seamless data integration. This collaboration optimized the way frontend components consumed data and aligned it effectively with the Product Information Management (PIM) system.",
       },
       {
-        title: "Elevating Application Integrity through Automation",
+        title: "Enhanced Application Security",
         description:
-          "I've been instrumental in fortifying our application's security and robustness by implementing automated testing, leveraging Playwright as our chosen tool. This initiative underscores my commitment to delivering a dependable and steadfast user experience.",
+          "I took steps to strengthen our application's security and reliability. I achieved this by implementing automated testing using Playwright, which ensured a dependable and steadfast user experience.",
       },
       {
-        title: "Design-Driven Collaborations",
+        title: "Design Collaboration",
         description:
-          "My engagement extended to close collaboration with the design team, playing a pivotal role in shaping the product's trajectory. This relationship ensured that our craftsmanship aligned seamlessly with the envisioned product direction, resulting in an aesthetically appealing and user-centric end product.",
+          "I collaborated closely with the design team to ensure that our development work aligned seamlessly with the envisioned product direction. This resulted in a visually appealing and user-centric end product.",
       },
     ],
   },
@@ -135,49 +133,44 @@ export const experienceData: ExperienceType[] = [
     endDate: "September 2022",
     responsibilities: [
       {
-        title: "Apprenticeship Achievement",
+        title: "Apprenticeship Completion",
         description:
-          "Successfully completed a Level 4 apprenticeship, showcasing a steadfast commitment to learning and growth.",
+          "I successfully completed a Level 4 apprenticeship program, showcasing my unwavering commitment to continuous learning and professional growth.",
       },
       {
-        title: "Content Mastery with Contentful",
+        title: "Content Management",
         description:
-          "Proficiently operate within Contentful, a robust content management system, demonstrating a knack for streamlining content workflows.",
+          "Proficiently managing content using Contentful was a key aspect of my role. I streamlined content workflows, making the process more efficient and effective.",
       },
       {
-        title: "Optimizely Expertise for Seamless Experimentation",
+        title: "A/B Testing",
         description:
-          "Leverage Optimizely as a regular tool, orchestrating A/B tests on websites with precision to enhance user experiences and inform data-driven decisions.",
+          "I conducted A/B tests using Optimizely, which played a pivotal role in enhancing user experiences and supporting data-driven decision-making.",
       },
       {
-        title: "Cross-Functional Communication",
+        title: "Effective Communication",
         description:
-          "Facilitate effective communication across departments, engaging with developers, UX designers, QA professionals, scrum masters, and product owners to drive alignment and synergy.",
+          "Facilitating communication across various departments was crucial to our projects' success. I engaged with developers, UX designers, QA professionals, scrum masters, and product owners to ensure alignment and synergy.",
       },
       {
-        title: "Agile Participation",
+        title: "Active Agile Participation",
         description:
-          "Actively contribute to essential agile meetings, such as sprint stand-up, refinement, retrospective, and review, demonstrating a commitment to iterative development and teamwork.",
+          "I actively contributed to essential agile meetings, including sprint stand-up, refinement, retrospective, and review. This demonstrated my dedication to iterative development and effective teamwork.",
       },
       {
-        title: "Accessibility Advocate",
+        title: "Accessibility Initiatives",
         description:
-          "Spearhead Accessibility initiatives in the Service Centre, taking charge of implementing automated tests to measure and enhance accessibility standards.",
+          "I took charge of accessibility initiatives in the Service Centre, implementing automated tests to measure and improve accessibility standards, ensuring that our digital products were more inclusive.",
       },
       {
-        title: "Holistic Agile Engagement",
+        title: "Code Deployment Management",
         description:
-          "Embrace multifaceted responsibilities by occasionally taking on the role of QA within an agile squad, exemplifying adaptability and dedication to a well-rounded approach.",
+          "Managing code deployment and releases through Azure and Github was a critical responsibility. I ensured a seamless transition of new features into the master branch, maintaining application stability.",
       },
       {
-        title: "Flawless Code Deployment",
+        title: "Comprehensive Testing",
         description:
-          "Execute seamless code deployment and releases through Azure and Github, ensuring a seamless transition of new features into the master branch.",
-      },
-      {
-        title: "End-to-End Test Ownership",
-        description:
-          "Expertly design comprehensive test cases and scripts while maintaining robust test coverage, assuring code integrity and application stability.",
+          "Designing comprehensive test cases and scripts while maintaining robust test coverage was part of my role. This ensured the integrity of our code and the stability of our applications.",
       },
     ],
   },
@@ -188,24 +181,24 @@ export const experienceData: ExperienceType[] = [
     endDate: "June 2020",
     responsibilities: [
       {
-        title: "Immersive 12-Week Coding Camp",
+        title: "Coding Bootcamp Experience",
         description:
-          "Embarked on a transformative 12-week coding bootcamp, immersing myself in a dynamic curriculum that encompassed a comprehensive array of technologies, ranging from JavaScript, C#, and Node.js to other front-end and back-end marvels, all designed to sculpt my technical prowess.",
+          "I embarked on a transformative 12-week coding bootcamp, immersing myself in a dynamic curriculum that covered various technologies. From JavaScript to C# and Node.js, this experience significantly enhanced my technical skills.",
       },
       {
-        title: "Projects",
+        title: "Hands-On Projects",
         description:
-          "Transcending theoretical knowledge, I took on hands-on learning by building multifaceted projects that spanned a variety of domains. From crafting a versatile calculator and a captivating dice game to harnessing the power of APIs in projects like Rick & Morty API and Weather API, these experiences solidified my practical command over diverse tech stacks",
+          "To apply my theoretical knowledge, I undertook hands-on projects spanning diverse domains. From creating a versatile calculator and an engaging dice game to working with APIs in projects like Rick & Morty API and Weather API, these experiences solidified my practical command over various tech stacks.",
       },
       {
-        title: "Apprenticeship Advancement",
+        title: "Apprenticeship Journey",
         description:
-          "Honed my skills as an apprentice software engineer, navigating complexities and challenges inherent to real-world development scenarios. This journey has been a testament to my commitment to continual growth and excellence in the software engineering domain.",
+          "I honed my skills as an apprentice software engineer, navigating complexities and challenges inherent to real-world development scenarios. This journey was a testament to my commitment to continual growth and excellence in the software engineering domain.",
       },
       {
-        title: "Elevated Learning through Live Online Sessions",
+        title: "Online Learning",
         description:
-          "Navigated a rich tapestry of knowledge through live online classes, engaging with experts and fellow learners to enrich my understanding and perspectives on various technologies.",
+          "I enriched my learning through live online classes, engaging with experts and fellow learners to expand my understanding and perspectives on various technologies.",
       },
     ],
   },

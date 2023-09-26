@@ -30,6 +30,7 @@ export const EMAIL_ERROR =
 // Navbar content
 export const THINGS_TITLE = "THINGS";
 export const SOCIALS_TITLE = "SOCIALS";
+export const MAIL_TITLE = "MAIL";
 
 // Resume content
 export const SOFTWARE_ENGINEER = "SOFTWARE ENGINEER";
@@ -40,7 +41,7 @@ export const OTHERS_TITLE = "Others:";
 export const PROFILE_TITLE = "Profile";
 export const PROFILE_DESCRIPTION = `Experienced front-end developer with a strong foundation in
   building interactive web applications using React and TypeScript.
-  Eager to explore the captivating synergy of AI and back-end
+  Eager to explore more about the rise of AI and back-end
   technologies, my passion for innovation drives me to expand my
   skill set and contribute to pioneering projects that seamlessly
   blend cutting-edge frontend design with powerful backend

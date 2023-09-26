@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import React, { PropsWithChildren } from "react";
 import NavBar from "./nav-bar/nav-bar";
 import { useActiveSection } from "@/hooks/use-active-section/use-active-section";
 import { useRouter } from "next/router";
@@ -13,7 +13,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div id="app" data-current-section={activeSectionValue}>
       {!routesWithoutNavbar && <NavBar />}
-      {React.Children.map(children, (child) => React.cloneElement(child))}
+      {children}
     </div>
   );
 };
