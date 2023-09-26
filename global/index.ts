@@ -79,8 +79,8 @@ export const myInterests = [
 
 export const pageLinks = [
   { href: "/resume", value: "My Resume", target: "_blank" },
-  { href: "/work", value: "My Work" },
-  { href: "/contact", value: "Contact Me" },
+  { href: "/work", value: "my work" },
+  { href: "/contact", value: "contact me" },
 ];
 
 export const mail = { href: "mailto:hello@calalton.com", value: "My Mail" };

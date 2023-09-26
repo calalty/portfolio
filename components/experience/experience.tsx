@@ -1,6 +1,7 @@
 import React from "react";
 import { ExperienceType } from "./experience.type";
 import styles from "./experience.module.scss";
+import { syneHeading } from "@/global/fonts";
 export const Experience = ({
   jobTitle,
   company,
@@ -10,7 +11,7 @@ export const Experience = ({
 }: ExperienceType) => (
   <div className={styles.experience}>
     <header>
-      <h3>
+      <h3 className={syneHeading.className}>
         {company} <span> - {jobTitle}</span>
       </h3>
       <span>

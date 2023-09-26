@@ -7,6 +7,7 @@ import {
 import { PatternV1, PatternV2 } from "../icons";
 import styles from "./about.module.scss";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
+import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function About() {
   const isMobile = useMediaMatch("(min-width: 43.75rem)");
@@ -14,7 +15,7 @@ export default function About() {
   const renderArticle = (title, paragraph, type: "life" | "coding") => (
     <article className={styles.description}>
       <div>
-        <h2>{title}</h2>
+        <h2 className={syneHeadingBoldest.className}>{title}</h2>
         <p>{paragraph}</p>
       </div>
       {isMobile && <>{type === "life" ? <PatternV1 /> : <PatternV2 />}</>}

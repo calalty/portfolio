@@ -18,6 +18,7 @@ import {
   REQUIRED_FIELDS,
 } from "@/contents/global";
 import { REGEX_EMAIL_VALIDATION } from "@/global/pattern";
+import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function Contact() {
   const { control } = useForm({
@@ -84,7 +85,7 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.container} data-section="contact">
       <div className={styles.contact}>
-        <h4>{CONTACT_TITLE}</h4>
+        <h4 className={syneHeadingBoldest.className}>{CONTACT_TITLE}</h4>
         <p>{CONTACT_SUBTITLE}</p>
 
         <form ref={form} className={styles.root} onSubmit={sendEmail}>

@@ -10,6 +10,7 @@ import {
 } from "@/contents/global";
 import { Experience } from "../experience/experience";
 import { experienceData } from "@/global";
+import { syneHeading } from "@/global/fonts";
 
 export const ResumeDetails = () => {
   const pdfUrl = `/pdfs/CallumAltonPortfolio.pdf`;
@@ -28,14 +29,14 @@ export const ResumeDetails = () => {
       <div className={styles["resume-details-wrapper"]}>
         <section className={styles.profile}>
           <div>
-            <h2>{PROFILE_TITLE}</h2>
+            <h2 className={syneHeading.className}>{PROFILE_TITLE}</h2>
           </div>
           <p>{PROFILE_DESCRIPTION}</p>
           <br />
           <p>{PROFILE_SECOND_PARAGRAPH}</p>
         </section>
         <section className={styles.experience}>
-          <h2>{EXPERIENCE_TITLE}</h2>
+          <h2 className={syneHeading.className}>{EXPERIENCE_TITLE}</h2>
           <p>{EXPERIENCE_PARAGRAPH}</p>
 
           {experienceData.map(

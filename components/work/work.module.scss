@@ -50,7 +50,6 @@ $xl-bp: 61.5rem;
         overflow: hidden;
 
         h2 {
-            font-weight: 700;
             text-align: left;
             width: 100%;
             overflow: hidden;
@@ -89,11 +88,6 @@ $xl-bp: 61.5rem;
 
         .hide-arrow {
             transform: translateX(-100%);
-        }
-
-        .heading {
-            text-transform: uppercase;
-            font-weight: 700;
         }
 
         .show-heading {

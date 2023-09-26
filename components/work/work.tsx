@@ -2,7 +2,12 @@ import { workArray } from "@/global";
 import React, { useState } from "react";
 import styles from "./work.module.scss";
 import { WorkIllustration } from "../icons";
-import { ABOUT_PARAGRAPH, OVER_THE_YEARS } from "@/contents/global";
+import {
+  ABOUT_PARAGRAPH_1,
+  ABOUT_PARAGRAPH_2,
+  OVER_THE_YEARS,
+} from "@/contents/global";
+import { syneHeading, syneHeadingBoldest } from "@/global/fonts";
 
 export function WorkItem({ title, description, index }) {
   const [hoveredWork, setHoveredWork] = useState<number | null>(null);
@@ -24,7 +29,7 @@ export function WorkItem({ title, description, index }) {
           <div>
             <h3 className={`${showArrowStyle} ${styles.arrow} font-sans`}>→</h3>
           </div>
-          <h3 className={`${showHeadingStyle} ${styles.heading} type-heading`}>
+          <h3 className={`${showHeadingStyle} ${syneHeading.className}`}>
             {title}
           </h3>
           <p>{description}</p>
@@ -43,7 +48,7 @@ export default function Work() {
         </div>
         <div className={styles["work-container"]}>
           <div className={styles.title}>
-            <h2>{OVER_THE_YEARS}</h2>
+            <h2 className={syneHeadingBoldest.className}>{OVER_THE_YEARS}</h2>
           </div>
           <ul>
             {workArray.map(({ title, description }, index) => (
@@ -55,7 +60,9 @@ export default function Work() {
               />
             ))}
           </ul>
-          <p>{ABOUT_PARAGRAPH}</p>
+          <p>{ABOUT_PARAGRAPH_1}</p>
+          <br />
+          <p>{ABOUT_PARAGRAPH_2}</p>
         </div>
       </div>
     </section>

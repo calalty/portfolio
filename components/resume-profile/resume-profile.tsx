@@ -10,6 +10,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "./resume-profile.module.scss";
 import { coreTechnologies, others } from "@/global";
+import { syneHeading } from "@/global/fonts";
 
 export const ResumeProfile = () => {
   const fullName = FULL_NAME.split(" ");
@@ -19,14 +20,14 @@ export const ResumeProfile = () => {
   return (
     <aside className={styles["resume-profile"]}>
       <Image src={coolstatue} width={500} height={500} alt="" />
-      <h1>
+      <h1 className={syneHeading.className}>
         {firstName} <br /> {lastName}
       </h1>
       <p className={styles.role}>{SOFTWARE_ENGINEER}</p>
 
       <p className={styles.location}>{MANCHESTER_UK}</p>
       <div className={styles.skills}>
-        <h3>{CORE_TECHNOLOGIES_TITLE}</h3>
+        <h3 className={syneHeading.className}>{CORE_TECHNOLOGIES_TITLE}</h3>
         <ul>
           {coreTechnologies.map((value) => (
             <li key={value}>{value}</li>
@@ -35,7 +36,7 @@ export const ResumeProfile = () => {
       </div>
 
       <div className={styles.skills}>
-        <h3>{OTHERS_TITLE}</h3>
+        <h3 className={syneHeading.className}>{OTHERS_TITLE}</h3>
         <ul>
           {others.map((value) => (
             <li key={value}>{value}</li>

@@ -1,24 +1,24 @@
 // Home content
-export const FULL_NAME = "Callum Alton.";
+export const FULL_NAME = "Cal Alton.";
 export const HELLO_INTRO = "Hi, I am";
 export const DESCRIPTION =
   "I take pride in crafting robust and scalable software solutions that deliver exceptional user experiences";
 
 // About content
-export const LIFE_TITLE = "LIFE";
+export const LIFE_TITLE = "Life";
 export const LIFE_PARAGRAPH =
   "My primary ambition is to travel the world while engaging in coding. Alongside this, I harbor a strong desire to expand my knowledge in backend development and, more recently, AI. Beyond coding, I find fulfillment in practicing martial arts such as kickboxing and boxing. Interestingly, it is during these moments of physical activity that my creativity and ideas flow freely, transcending the confines of the workplace.";
-export const CODING_TITLE = "CODING";
+export const CODING_TITLE = "Coding";
 export const CODING_PARAGRAPH =
   "I have honed my skills in frontend development. However, with my web portfolio now live, I am driven to explore the intricacies of other areas. With an unwavering focus on efficiency and forward-looking solutions, I am poised to embark on a journey of endless possibilities in the world of coding.";
 
 // Contact content
-export const CONTACT_TITLE = "CONTACT ME";
+export const CONTACT_TITLE = "Contact Me";
 export const CONTACT_SUBTITLE =
   "Got any questions, or just want to say hello? Fire away!";
-export const CONTACT_NAME = "NAME";
-export const CONTACT_EMAIL = "E-MAIL ADDRESS";
-export const CONTACT_MESSAGE = "MESSAGE";
+export const CONTACT_NAME = "Name";
+export const CONTACT_EMAIL = "E-mail address";
+export const CONTACT_MESSAGE = "Message";
 export const CONTACT_SUBMIT = "FIRE AWAY";
 export const INVALID_EMAIL = "Please enter a valid email address";
 export const REQUIRED_FIELDS = "Please fill in the required fields";
@@ -33,8 +33,8 @@ export const SOCIALS_TITLE = "SOCIALS";
 export const MAIL_TITLE = "MAIL";
 
 // Resume content
-export const SOFTWARE_ENGINEER = "SOFTWARE ENGINEER";
-export const MANCHESTER_UK = "MANCHESTER, UK";
+export const SOFTWARE_ENGINEER = "Software Engineer";
+export const MANCHESTER_UK = "Manchester, UK";
 export const CORE_TECHNOLOGIES_TITLE = "Core Technologies:";
 export const DOWNLOAD = "Download";
 export const OTHERS_TITLE = "Others:";
@@ -59,6 +59,8 @@ export const EXPERIENCE_PARAGRAPH = `I have worked in a small number of diverse 
   growth as an accomplished front-end developer:`;
 
 // Work content
-export const OVER_THE_YEARS = "OVER THE YEARS,";
-export const ABOUT_PARAGRAPH =
-  "Throughout my professional journey, I've had the privilege of contributing to various organizations and projects, each playing a crucial role in shaping my skills and expertise. My commitment to excellence in software engineering has taken me on a path filled with exciting challenges and valuable experiences. Here, you'll find a chronological overview of the companies and roles I've been a part of, highlighting key accomplishments and insights gained along the way.";
+export const OVER_THE_YEARS = "My Career,";
+export const ABOUT_PARAGRAPH_1 =
+  "Throughout my professional journey, I've had the privilege of contributing to various organizations and projects, each playing a crucial role in shaping my skills and expertise.";
+export const ABOUT_PARAGRAPH_2 =
+  "Here, you'll find a chronological overview of the companies and roles I've been a part of, highlighting key accomplishments and insights gained along the way.";

@@ -5,6 +5,7 @@ import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 import { DESCRIPTION, FULL_NAME, HELLO_INTRO } from "../../contents/global";
 import { Portrait } from "../icons";
 import { PageNavigation } from "../page-navigation/page-navigation";
+import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function Hero({ toggle }) {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
@@ -15,7 +16,7 @@ export default function Hero({ toggle }) {
       <div className={styles["primary-content"]}>
         <div className={styles["inner-content"]}>
           <div>
-            <h1 className="type-heading">
+            <h1 className={syneHeadingBoldest.className}>
               <span className={styles["text-outline"]}>{HELLO_INTRO}</span>
               <br />
               {FULL_NAME}
