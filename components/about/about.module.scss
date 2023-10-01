@@ -77,7 +77,7 @@ $lg-bp: 43.75rem;
         max-width: 701px;
         width: 35vw;
         color: var(--c-lavender);
-        font-size: 1rem;
+        font-size: 1em;
 
         @media screen and (max-width: $m-bp) {
             width: 100%;

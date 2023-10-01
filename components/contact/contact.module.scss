@@ -34,7 +34,7 @@ $lg-bp: 43.75rem;
     }
 
     p {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     @media screen and (max-width: $lg-bp) {
@@ -65,6 +65,10 @@ $lg-bp: 43.75rem;
         display: flex;
         flex-direction: column;
         width: 100%;
+
+        &:focus-within label {
+            color: var(--c-steel-blue)
+        }
     }
 
     .personal-details {
@@ -82,21 +86,41 @@ $lg-bp: 43.75rem;
         text-align: left;
         margin: 1rem 0;
         color: var(--c-lavender);
+        opacity: 0.75;
+        transition: 0.5s all ease-in-out;
+
+        &+input:focus~& {
+            color: var(--c-steel-blue);
+        }
     }
 
     input,
     textarea {
-        border: 1px solid var(--c-lavender);
+        color: var(--c-lavender);
+        background: transparent;
+        border-bottom: 1px solid var(--c-lavender);
+
+        &:focus {
+            outline: none;
+            color: var(--c-steel-blue);
+            border-bottom: 1px solid var(--c-steel-blue);
+
+            &::placeholder {
+                transition: 0.5s all ease-in-out;
+                color: transparent;
+            }
+        }
+
+        &::placeholder {
+            color: var(--c-lavender);
+        }
     }
 
-    textarea {
-        line-height: 1.5rem;
-        padding: 1.25rem;
-    }
-
+    textarea,
     input {
-        padding: 0 1.25rem;
-        height: 4rem;
+        line-height: 1.5rem;
+        padding: 0.6rem;
+        padding-left: 0;
     }
 
     .submit-btn {
@@ -104,7 +128,6 @@ $lg-bp: 43.75rem;
         min-width: 24rem;
         padding: 1rem 2rem;
         border: 1px solid var(--c-steel-blue);
-        background-color: var(--c-neutral-white);
         box-shadow: inset 0 0 0 0 var(--c-steel-blue);
         transition: ease-out 0.4s;
 
@@ -119,6 +142,13 @@ $lg-bp: 43.75rem;
 
         span {
             margin-right: 0.5rem;
+        }
+
+        &:disabled {
+            opacity: 0.75;
+            border: 1px solid var(--c-lavender);
+            color: var(--c-lavender);
+            box-shadow: none;
         }
     }
 }

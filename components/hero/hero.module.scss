@@ -28,7 +28,7 @@ $lg-bp: 43.75rem;
     figure {
         width: 20rem;
         height: 20rem;
-        margin-right: inherit;
+        margin-right: 6rem;
         position: relative;
         border: 1px solid var(--c-off-white);
 
@@ -94,13 +94,12 @@ $lg-bp: 43.75rem;
 
         @media screen and (max-width: $m-bp) {
             max-width: 100%;
-            font-size: 1.5rem;
         }
     }
 
     .links {
         display: flex;
-        font-size: 1.25rem;
+        font-size: 1rem;
         margin-top: 2.5rem;
         gap: 2rem;
 

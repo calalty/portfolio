@@ -1,8 +1,8 @@
 // Home content
-export const FULL_NAME = "Cal Alton.";
+export const FULL_NAME = "Cal Alton";
 export const HELLO_INTRO = "Hi, I am";
 export const DESCRIPTION =
-  "I take pride in crafting robust and scalable software solutions that deliver exceptional user experiences";
+  "I take pride in crafting robust and scalable software solutions that deliver exceptional user experiences.";
 
 // About content
 export const LIFE_TITLE = "Life";
@@ -26,6 +26,9 @@ export const EMAIL_SENT = "Thank you for your message!";
 export const EMAIL_SENDING = "Your message is sending...";
 export const EMAIL_ERROR =
   "There has been an error whilst sending your message.";
+export const EMAIL_PLACEHOLDER = "Enter your email";
+export const MESSAGE_PLACEHOLDER = "Enter your message";
+export const NAME_PLACEHOLDER = "Enter your name";
 
 // Navbar content
 export const THINGS_TITLE = "THINGS";
@@ -62,5 +65,3 @@ export const EXPERIENCE_PARAGRAPH = `I have worked in a small number of diverse 
 export const OVER_THE_YEARS = "My Career,";
 export const ABOUT_PARAGRAPH_1 =
   "Throughout my professional journey, I've had the privilege of contributing to various organizations and projects, each playing a crucial role in shaping my skills and expertise.";
-export const ABOUT_PARAGRAPH_2 =
-  "Here, you'll find a chronological overview of the companies and roles I've been a part of, highlighting key accomplishments and insights gained along the way.";

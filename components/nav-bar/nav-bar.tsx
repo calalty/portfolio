@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
 import { mail, pageLinks, socialMedias } from "@/global";
@@ -8,11 +8,19 @@ import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-  const isMobile = useMediaMatch("(min-width: 43.75rem)");
+  const isDesktop = useMediaMatch("(min-width: 43.75rem)");
   const { href, value } = mail;
   const handleOnClick = () => {
     setToggle(!toggle);
   };
+
+  useEffect(() => {
+    if (toggle) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [toggle]);
 
   const renderNavSection = (
     title: string,
@@ -51,18 +59,18 @@ const NavBar = () => {
         <Logo />
       </Link>
 
-      <button onClick={handleOnClick}>
+      <button aria-expanded={toggle} onClick={handleOnClick}>
         <Menu transform={toggle} />
       </button>
 
       <nav
         aria-hidden={toggle}
-        className={`${isMobile ? styles["nav-menu"] : styles["nav-modal"]} ${
+        className={`${isDesktop ? styles["nav-menu"] : styles["nav-modal"]} ${
           toggle && styles.open
         }`}
       >
         <div className={styles.info}>
-          {renderNavSection(THINGS_TITLE, pageLinks, "things")}
+          {renderNavSection(THINGS_TITLE, pageLinks(isDesktop), "things")}
           <div className={styles.mail}>
             <span className={styles["modal-title"]}>{MAIL_TITLE}</span>
             <a target="_blank" rel="nofollow" href={href}>

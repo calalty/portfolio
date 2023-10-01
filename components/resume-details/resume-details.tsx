@@ -9,12 +9,10 @@ import {
   PROFILE_TITLE,
 } from "@/contents/global";
 import { Experience } from "../experience/experience";
-import { experienceData } from "@/global";
+import { experienceData, pdfUrl } from "@/global";
 import { syneHeading } from "@/global/fonts";
 
 export const ResumeDetails = () => {
-  const pdfUrl = `/pdfs/CallumAltonPortfolio.pdf`;
-
   return (
     <article className={styles["resume-details"]}>
       <div className={styles.download}>

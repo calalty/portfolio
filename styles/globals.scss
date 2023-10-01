@@ -11,6 +11,10 @@
   --c-lavender: #aab2d1;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 #app[data-current-section='work'],
 #app[data-current-section='hero'] {
   header {
@@ -49,11 +53,11 @@ html {
   }
 
   @media (min-width: 1601px) {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   @media (min-width: 701px) and (max-width: 1600px) {
-    font-size: 1.35vw;
+    font-size: 1.15vw;
   }
 }
 

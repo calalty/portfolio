@@ -14,22 +14,30 @@ import {
   CONTACT_SUBMIT,
   CONTACT_SUBTITLE,
   CONTACT_TITLE,
+  EMAIL_PLACEHOLDER,
   INVALID_EMAIL,
+  MESSAGE_PLACEHOLDER,
+  NAME_PLACEHOLDER,
   REQUIRED_FIELDS,
 } from "@/contents/global";
 import { REGEX_EMAIL_VALIDATION } from "@/global/pattern";
 import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function Contact() {
-  const { control } = useForm({
+  const {
+    control,
+    formState: { isDirty },
+  } = useForm({
     reValidateMode: "onSubmit",
   });
   const form = useRef();
   const [status, setStatus] = useState(null);
 
+  const isFormValid = !isDirty;
   const renderController = (
     name: string,
     label: string,
+    placeholder: string,
     additionalRules?: RegisterOptions<FieldValues, string>
   ) => (
     <Controller
@@ -45,14 +53,16 @@ export default function Contact() {
 
           {name === "message" ? (
             <textarea
+              placeholder={placeholder}
               value={field.value}
               name={field.name}
               required
-              rows={5}
+              rows={3}
               minLength={30}
             ></textarea>
           ) : (
             <input
+              placeholder={placeholder}
               className={styles.input}
               value={field.value}
               name={field.name}
@@ -88,10 +98,15 @@ export default function Contact() {
         <h4 className={syneHeadingBoldest.className}>{CONTACT_TITLE}</h4>
         <p>{CONTACT_SUBTITLE}</p>
 
-        <form ref={form} className={styles.root} onSubmit={sendEmail}>
+        <form
+          ref={form}
+          className={styles.root}
+          onSubmit={sendEmail}
+          noValidate
+        >
           <div className={styles["personal-details"]}>
-            {renderController("name", CONTACT_NAME)}
-            {renderController("email", CONTACT_EMAIL, {
+            {renderController("name", CONTACT_NAME, NAME_PLACEHOLDER)}
+            {renderController("email", CONTACT_EMAIL, EMAIL_PLACEHOLDER, {
               pattern: {
                 value: REGEX_EMAIL_VALIDATION,
                 message: INVALID_EMAIL,
@@ -99,9 +114,13 @@ export default function Contact() {
             })}
           </div>
 
-          {renderController("message", CONTACT_MESSAGE)}
+          {renderController("message", CONTACT_MESSAGE, MESSAGE_PLACEHOLDER)}
 
-          <button className={styles["submit-btn"]}>
+          <button
+            type="submit"
+            className={styles["submit-btn"]}
+            disabled={isFormValid}
+          >
             <p>
               <span className="font-sans">→</span> {CONTACT_SUBMIT}
             </p>

@@ -2,11 +2,7 @@ import { workArray } from "@/global";
 import React, { useState } from "react";
 import styles from "./work.module.scss";
 import { WorkIllustration } from "../icons";
-import {
-  ABOUT_PARAGRAPH_1,
-  ABOUT_PARAGRAPH_2,
-  OVER_THE_YEARS,
-} from "@/contents/global";
+import { ABOUT_PARAGRAPH_1, OVER_THE_YEARS } from "@/contents/global";
 import { syneHeading, syneHeadingBoldest } from "@/global/fonts";
 
 export function WorkItem({ title, description, index }) {
@@ -61,8 +57,6 @@ export default function Work() {
             ))}
           </ul>
           <p>{ABOUT_PARAGRAPH_1}</p>
-          <br />
-          <p>{ABOUT_PARAGRAPH_2}</p>
         </div>
       </div>
     </section>

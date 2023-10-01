@@ -9,7 +9,7 @@ import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function Hero({ toggle }) {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
-  const slicedPageLinks = pageLinks.slice(1, 3);
+  const slicedPageLinks = pageLinks().slice(1, 3);
 
   return (
     <section id="hero" data-section="hero" className={styles.container}>

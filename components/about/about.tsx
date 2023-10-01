@@ -10,7 +10,7 @@ import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function About() {
-  const isMobile = useMediaMatch("(min-width: 43.75rem)");
+  const isDesktop = useMediaMatch("(min-width: 43.75rem)");
 
   const renderArticle = (title, paragraph, type: "life" | "coding") => (
     <article className={styles.description}>
@@ -18,7 +18,7 @@ export default function About() {
         <h2 className={syneHeadingBoldest.className}>{title}</h2>
         <p>{paragraph}</p>
       </div>
-      {isMobile && <>{type === "life" ? <PatternV1 /> : <PatternV2 />}</>}
+      {isDesktop && <>{type === "life" ? <PatternV1 /> : <PatternV2 />}</>}
     </article>
   );
 

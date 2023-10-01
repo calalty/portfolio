@@ -66,7 +66,7 @@ export const socialMedias = [
   { value: "GH", href: "https://github.com/calalty" },
 ];
 
-export const myInterests = [
+export const myInterests: string[] = [
   "frontend",
   "artificial intelligence",
   "backend",
@@ -77,15 +77,15 @@ export const myInterests = [
   "roast potatoes",
 ];
 
-export const pageLinks = [
-  { href: "/resume", value: "My Resume", target: "_blank" },
-  { href: "/work", value: "my work" },
-  { href: "/contact", value: "contact me" },
+export const pageLinks = (isMobile?: boolean) => [
+  { href: isMobile ? "/resume" : pdfUrl, value: "My Resume", target: "_blank" },
+  { href: "/work", value: "My Work" },
+  { href: "/contact", value: "Contact Me" },
 ];
 
 export const mail = { href: "mailto:hello@calalton.com", value: "My Mail" };
 
-export const sections = ["hero", "about", "work", "contact"];
+export const sections: string[] = ["hero", "about", "work", "contact"];
 
 export const experienceData: ExperienceType[] = [
   {
@@ -204,7 +204,7 @@ export const experienceData: ExperienceType[] = [
   },
 ];
 
-export const coreTechnologies = [
+export const coreTechnologies: string[] = [
   "Javascript",
   "Typescript",
   "CSS",
@@ -217,7 +217,7 @@ export const coreTechnologies = [
   "Storybook",
 ];
 
-export const others = [
+export const others: string[] = [
   "Automation testing.",
   "Responsive web design.",
   "Performance optimization.",
@@ -229,3 +229,5 @@ export const others = [
   "Continuous drive to innovate and enhance processes for swifter and more efficient outcomes.",
   "Uncovering unexpected and imaginative solutions that set me apart.",
 ];
+
+export const pdfUrl: string = "/pdfs/CallumAltonPortfolio.pdf";
