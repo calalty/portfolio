@@ -1,8 +1,8 @@
 import Link from "next/link";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
-import { mail, pageLinks, socialMedias } from "@/global";
+import { mail, modalLinks, socialMedias } from "@/global";
 import { MAIL_TITLE, SOCIALS_TITLE, THINGS_TITLE } from "@/contents/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 
@@ -70,7 +70,7 @@ const NavBar = () => {
         }`}
       >
         <div className={styles.info}>
-          {renderNavSection(THINGS_TITLE, pageLinks(isDesktop), "things")}
+          {renderNavSection(THINGS_TITLE, modalLinks(isDesktop), "things")}
           <div className={styles.mail}>
             <span className={styles["modal-title"]}>{MAIL_TITLE}</span>
             <a target="_blank" rel="nofollow" href={href}>

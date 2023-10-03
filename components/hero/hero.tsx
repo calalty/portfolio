@@ -9,7 +9,6 @@ import { syneHeadingBoldest } from "@/global/fonts";
 
 export default function Hero({ toggle }) {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
-  const slicedPageLinks = pageLinks().slice(1, 3);
 
   return (
     <section id="hero" data-section="hero" className={styles.container}>
@@ -30,7 +29,7 @@ export default function Hero({ toggle }) {
         <div>
           <PageNavigation />
           <ul className={styles.links}>
-            {slicedPageLinks.map(({ href, value }) => (
+            {pageLinks.map(({ href, value }) => (
               <li className={styles["link-wrapper"]} key={value}>
                 <Link href={href}>
                   <span className={`${styles.arrow} font-sans`}>→</span>

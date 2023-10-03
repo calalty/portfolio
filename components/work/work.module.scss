@@ -65,7 +65,7 @@ $xl-bp: 61.5rem;
     .links {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         position: relative;
         padding: 1.5rem 0;
         border-bottom: 1px solid var(--c-off-white);
@@ -78,7 +78,6 @@ $xl-bp: 61.5rem;
 
         .arrow,
         .heading {
-            transition: all 500ms;
             position: relative;
         }
 
@@ -95,7 +94,14 @@ $xl-bp: 61.5rem;
         }
 
         .hide-heading {
-            transform: none;
+            transform: translateX(0);
+        }
+
+        .show-arrow,
+        .hide-arrow,
+        .show-heading,
+        .hide-heading {
+            transition: all 500ms ease-in-out;
         }
     }
 }

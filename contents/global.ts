@@ -31,7 +31,7 @@ export const MESSAGE_PLACEHOLDER = "Enter your message";
 export const NAME_PLACEHOLDER = "Enter your name";
 
 // Navbar content
-export const THINGS_TITLE = "THINGS";
+export const THINGS_TITLE = "A THING";
 export const SOCIALS_TITLE = "SOCIALS";
 export const MAIL_TITLE = "MAIL";
 

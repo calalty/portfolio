@@ -77,8 +77,11 @@ export const myInterests: string[] = [
   "roast potatoes",
 ];
 
-export const pageLinks = (isMobile?: boolean) => [
+export const modalLinks = (isMobile?: boolean) => [
   { href: isMobile ? "/resume" : pdfUrl, value: "My Resume", target: "_blank" },
+];
+
+export const pageLinks = [
   { href: "/work", value: "My Work" },
   { href: "/contact", value: "Contact Me" },
 ];
