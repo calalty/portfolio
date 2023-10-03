@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+$lg-bp: 43.75rem;
+
 :root {
   --c-neutral-white: #ffffff;
   --c-neutral-black: #1a2e47;
@@ -15,6 +17,27 @@
   overflow: hidden;
 }
 
+#app:has(#title) header svg path {
+
+  @media screen and (min-width: $lg-bp) {
+    &:first-of-type {
+      fill: var(--c-steel-blue);
+    }
+
+    &:last-of-type {
+      fill: var(--c-lavender);
+    }
+  }
+}
+
+#app:has(#title) button svg {
+  stroke: var(--c-neutral-white);
+
+  @media screen and (min-width: $lg-bp) {
+    stroke: var(--c-steel-blue);
+  }
+}
+
 #app[data-current-section='work'],
 #app[data-current-section='hero'] {
   header {
@@ -22,7 +45,6 @@
       path {
         &:first-of-type {
           fill: var(--c-neutral-white);
-          opacity: 0.75;
         }
 
         &:last-of-type {
@@ -35,8 +57,6 @@
 
 #app[data-current-section='work'] {
   button {
-    color: var(--c-neutral-white);
-
     svg {
       stroke: var(--c-neutral-white);
     }

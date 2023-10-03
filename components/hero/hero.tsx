@@ -7,7 +7,7 @@ import { Portrait } from "../icons";
 import { PageNavigation } from "../page-navigation/page-navigation";
 import { syneHeadingBoldest } from "@/global/fonts";
 
-export default function Hero({ toggle }) {
+export default function Hero() {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
 
   return (

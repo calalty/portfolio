@@ -17,11 +17,7 @@ export function WorkItem({ title, description, currentIndex, index, onHover }) {
       <a href={`/${title}`}>
         <div className={styles.links}>
           <div>
-            <h3
-              className={`${showArrowStyle} ${styles.arrow} ${syneHeading.className} font-sans`}
-            >
-              →
-            </h3>
+            <h3 className={`${showArrowStyle} ${styles.arrow} font-sans`}>→</h3>
           </div>
           <h3 className={`${showHeadingStyle} ${syneHeading.className}`}>
             {title}
@@ -34,7 +30,7 @@ export function WorkItem({ title, description, currentIndex, index, onHover }) {
 }
 
 export default function Work() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef(null);
 
@@ -47,7 +43,7 @@ export default function Work() {
       clearInterval(intervalRef.current);
     }
 
-    return () => clearInterval(intervalRef.current); // Clear the interval on unmount
+    return () => clearInterval(intervalRef.current);
   }, [currentIndex, isHovered]);
 
   const handleHover = (index) => {
@@ -55,6 +51,8 @@ export default function Work() {
 
     if (index !== null) {
       setCurrentIndex(index);
+    } else {
+      setCurrentIndex(null);
     }
   };
 

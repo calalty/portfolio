@@ -11,7 +11,7 @@ export default function Home() {
         <title>Callum Alton: Software Engineer</title>
       </Head>
       <main>
-        <Hero toggle={false} />
+        <Hero />
         <About />
         <Work />
         <Contact />

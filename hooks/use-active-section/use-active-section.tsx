@@ -41,14 +41,6 @@ export const useActiveSection = () => {
   };
 
   useEffect(() => {
-    if (pathname === "/work") {
-      return setActiveSection({ activeSectionValue: "work" });
-    }
-
-    if (pathname === "/contact") {
-      return setActiveSection({ activeSectionValue: "c" });
-    }
-
     const handleScroll = () => {
       if (pathname === "/") {
         const newActiveSection = getActiveSection();

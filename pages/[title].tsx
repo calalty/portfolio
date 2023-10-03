@@ -1,35 +1,44 @@
 import { workArray } from "@/global";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import styles from "../styles/company.module.scss";
+import { syneHeading, syneHeadingBoldest } from "@/global/fonts";
 
-export default function TitlePage({ toggle }) {
-  const router = useRouter();
-  const { title } = router.query;
+export async function getStaticPaths() {
+  const paths = workArray.map(({ title }) => ({
+    params: { title },
+  }));
 
-  const workItem = workArray.find((item) => item.title === title);
+  return { paths, fallback: false };
+}
 
-  if (!workItem) {
-    return <div>Work item not found</div>;
-  }
+export async function getStaticProps({ params }) {
+  const workItem = workArray.find((item) => item.title === params.title);
 
+  return {
+    props: {
+      workItem,
+    },
+  };
+}
+
+export default function TitlePage({ workItem }) {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="title">
       <div className={styles["image-container"]}>
-        <Image alt="" src={workItem.img} />
+        <Image alt="" src={workItem?.img} />
       </div>
       <div className={styles["primary-content"]}>
         <div className={styles.title}>
-          <h2 className="type-heading">{workItem.title}</h2>
+          <h2 className={syneHeadingBoldest.className}>{workItem?.title}</h2>
           <hr />
         </div>
         <div className={styles["table-container"]}>
           <table>
             <tbody>
-              {workItem.project.map(({ title, description }, index) => (
+              {workItem?.project.map(({ title, description }, index) => (
                 <tr key={title}>
                   <td>
-                    <h4 className="type-heading">{title}</h4>
+                    <h4 className={syneHeading.className}>{title}</h4>
                   </td>
 
                   <td key={title + index}>
@@ -44,7 +53,7 @@ export default function TitlePage({ toggle }) {
             </tbody>
           </table>
           <div className={styles["work-description"]}>
-            <p>{workItem.work}</p>
+            <p>{workItem?.work}</p>
           </div>
         </div>
       </div>
