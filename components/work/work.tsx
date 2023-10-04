@@ -13,7 +13,11 @@ export function WorkItem({ title, description, currentIndex, index, onHover }) {
     index === currentIndex ? styles["show-heading"] : styles["hide-heading"];
 
   return (
-    <li onMouseEnter={() => onHover(index)} onMouseLeave={() => onHover(null)}>
+    <li
+      onMouseEnter={() => onHover(index)}
+      onClick={() => onHover(null)}
+      onMouseLeave={() => onHover(null)}
+    >
       <a href={`/${title}`}>
         <div className={styles.links}>
           <div>

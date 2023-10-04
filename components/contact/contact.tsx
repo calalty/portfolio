@@ -32,6 +32,7 @@ export default function Contact() {
     handleSubmit,
     formState: { isValid },
     control,
+    setValue,
   } = methods;
   const form = useRef();
   const [status, setStatus] = useState(null);
@@ -93,8 +94,10 @@ export default function Contact() {
       )
       .then(() => {
         setStatus("sent");
-      })
-      .then((error) => console.log(error));
+        setValue("name", "");
+        setValue("email", "");
+        setValue("message", "");
+      });
   };
 
   return (
@@ -124,7 +127,7 @@ export default function Contact() {
 
             <button
               type="submit"
-              disabled={!isValid}
+              disabled={!isValid || status === "sent"}
               className={styles["submit-btn"]}
             >
               <p>
