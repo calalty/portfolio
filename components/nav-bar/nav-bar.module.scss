@@ -14,7 +14,7 @@ $lg-bp: 43.75rem;
     z-index: 50;
 
     @media screen and (max-width: $m-bp) {
-        padding: 1.5rem 3rem;
+        padding: 2rem 3rem;
         position: absolute;
     }
 
@@ -124,7 +124,7 @@ $lg-bp: 43.75rem;
             }
         }
 
-        .social-medias {
+        .social-medias, .pages {
             font-size: 2rem;
         }
     }

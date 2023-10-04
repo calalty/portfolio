@@ -102,6 +102,7 @@ $lg-bp: 43.75rem;
         color: var(--c-lavender);
         background: transparent;
         border-bottom: 1px solid var(--c-lavender);
+        border-radius: 0px;
 
         &:focus {
             outline: none;
