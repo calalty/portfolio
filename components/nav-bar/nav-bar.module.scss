@@ -110,11 +110,12 @@ $lg-bp: 43.75rem;
         }
 
         .info {
-            padding: 10rem 5rem;
+            padding: 0 5rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
             height: 100vh;
+            gap: 1.875rem;
 
             .social,
             .contact,
@@ -124,7 +125,8 @@ $lg-bp: 43.75rem;
             }
         }
 
-        .social-medias, .pages {
+        .social-medias,
+        .pages {
             font-size: 2rem;
         }
     }
