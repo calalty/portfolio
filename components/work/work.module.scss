@@ -1,4 +1,3 @@
-$m-bp: 37.5rem;
 $sm-bp: 25rem;
 $lg-bp: 43.75rem;
 $xl-bp: 61.5rem;
@@ -8,16 +7,14 @@ $xl-bp: 61.5rem;
 }
 
 .container {
+    max-width: 90rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: row-reverse;
     margin: auto;
     width: 100%;
     position: relative;
     overflow: hidden;
     color: var(--c-off-white);
-    padding: 0 7.5rem;
     gap: 3rem;
 
     @media screen and (max-width: $lg-bp) {
@@ -27,9 +24,12 @@ $xl-bp: 61.5rem;
 
     @media screen and (min-width: $lg-bp) {
         scroll-snap-align: start;
+        padding: 7.5rem;
+
     }
 
-    @media screen and (min-width: $m-bp) {
+    @media (max-height: 74.9375rem) and (min-width: 43.8125rem) {
+        min-height: 100vh;
         height: 100vh;
     }
 }

@@ -5,6 +5,9 @@ import { Logo, Menu } from "../icons";
 import { mail, modalLinks, socialMedias } from "@/global";
 import { MAIL_TITLE, SOCIALS_TITLE, THINGS_TITLE } from "@/contents/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
+import { LinkType } from "@/global/global.type";
+import { LinksType } from "../links/links.type";
+import Links from "../links/links";
 
 const NavBar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -24,25 +27,20 @@ const NavBar = () => {
 
   const renderNavSection = (
     title: string,
-    links: { href: string; value: string; target?: string }[],
+    links: LinkType[],
     type: "social" | "things"
   ) => {
     const isSocialLinks = type === "social";
     return (
       <div className={isSocialLinks ? styles.social : styles.contact}>
         <span className={styles["modal-title"]}>{title}</span>
-        <ul
-          className={isSocialLinks ? styles["social-medias"] : styles["pages"]}
-        >
-          {links.map(({ href, value, target }) => (
-            <li key={value}>
-              <a href={href} target={target}>
-                <span className="font-sans"> {isSocialLinks ? "↗" : "→"}</span>
-                {value}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <Links
+          additionalClassName={
+            isSocialLinks ? styles["social-medias"] : styles["pages"]
+          }
+          arrowType={isSocialLinks ? "skewed" : "straight"}
+          links={links}
+        />
       </div>
     );
   };

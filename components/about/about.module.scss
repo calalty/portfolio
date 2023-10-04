@@ -1,4 +1,4 @@
-$m-bp: 37.5rem;
+$m-bp: 43.8125rem;
 $sm-bp: 25rem;
 $lg-bp: 43.75rem;
 
@@ -11,12 +11,14 @@ $lg-bp: 43.75rem;
     justify-content: center;
     align-items: center;
 
-    @media screen and (min-width: $m-bp) {
+    @media (max-height: 74.9375rem) and (min-width: 43.8125rem) {
+        min-height: 100vh;
         height: 100vh;
     }
 
     @media screen and (min-width: $lg-bp) {
         scroll-snap-align: start;
+        padding: 7.5rem 0;
     }
 }
 

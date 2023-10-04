@@ -1,11 +1,16 @@
-import Link from "next/link";
 import styles from "./hero.module.scss";
-import { pageLinks } from "@/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
-import { DESCRIPTION, FULL_NAME, HELLO_INTRO } from "../../contents/global";
+import {
+  DESCRIPTION,
+  FULL_NAME,
+  HELLO_INTRO,
+  SOCIALS_TITLE,
+} from "../../contents/global";
 import { Portrait } from "../icons";
 import { PageNavigation } from "../page-navigation/page-navigation";
 import { syneHeadingBoldest } from "@/global/fonts";
+import Links from "../links/links";
+import { socialMedias } from "@/global";
 
 export default function Hero() {
   const isMobile = useMediaMatch("(max-width: 37.5rem)");
@@ -26,19 +31,15 @@ export default function Hero() {
           {!isMobile && <Portrait />}
         </div>
 
-        <div>
+        <div className={styles['links-wrapper']}>
           <PageNavigation />
-          <ul className={styles.links}>
-            {pageLinks.map(({ href, value }) => (
-              <li className={styles["link-wrapper"]} key={value}>
-                <Link href={href}>
-                  <span className={`${styles.arrow} font-sans`}>→</span>
-                  <span className={styles.link}>{value}</span>
-                </Link>
-                <div className={styles["link-underline"]}></div>
-              </li>
-            ))}
-          </ul>
+
+          <span className={styles["links-title"]}>{SOCIALS_TITLE}</span>
+          <Links
+            additionalClassName={styles.links}
+            arrowType="skewed"
+            links={socialMedias}
+          />
         </div>
       </div>
 
