@@ -38,7 +38,7 @@ export default function Work() {
     if (!isHovered) {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % workArray.length);
-      }, 2500);
+      }, 2000);
     } else {
       clearInterval(intervalRef.current);
     }

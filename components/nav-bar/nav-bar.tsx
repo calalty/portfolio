@@ -69,13 +69,11 @@ const NavBar = () => {
       >
         <div className={styles.info}>
           {renderNavSection(THINGS_TITLE, modalLinks(isDesktop), "things")}
-          <div className={styles.mail}>
-            <span className={styles["modal-title"]}>{MAIL_TITLE}</span>
-            <a target="_blank" rel="nofollow" href={href}>
-              <span className="font-sans">→</span>
-              {value}
-            </a>
-          </div>
+          {renderNavSection(
+            MAIL_TITLE,
+            [{ href, value, target: "_blank" }],
+            "things"
+          )}
           {renderNavSection(SOCIALS_TITLE, socialMedias, "social")}
         </div>
       </nav>

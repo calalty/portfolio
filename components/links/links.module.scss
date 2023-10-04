@@ -39,8 +39,27 @@
     height: 0.075rem;
     bottom: 0;
     left: 0;
-    background-color: var(--c-off-white);
     transform-origin: bottom right;
     transform: translateX(-101%) translateZ(0px);
     transition: transform .25s ease-out;
+}
+
+.light {
+    .link-wrapper .link-underline {
+        background-color: var(--c-off-white);
+    }
+
+    li {
+        color: var(--c-off-white);
+    }
+}
+
+.dark {
+    .link-wrapper .link-underline {
+        background-color: var(--c-steel-blue);
+    }
+
+    li {
+        color: var(--c-steel-blue);
+    }
 }

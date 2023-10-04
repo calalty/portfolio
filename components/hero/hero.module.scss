@@ -157,21 +157,18 @@ $lg-bp: 43.75rem;
         margin-top: 1rem;
         gap: 2rem;
 
-
         &-title {
             font-size: 1.25rem;
             letter-spacing: 0.15rem;
-            color: var(--c-steel-blue);
+            color: var(--c-lavender);
         }
 
         &-wrapper {
             width: fit-content;
-            background: var(--c-lavender);
+            background-color: var(--c-off-white);
             padding: 1rem 1.5rem 0.75rem;
             border-radius: 0 0.5rem;
             margin-top: 2rem;
         }
     }
-
-
 }

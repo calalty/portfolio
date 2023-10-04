@@ -6,9 +6,14 @@ export default function Links({
   links,
   arrowType,
   additionalClassName,
+  theme = "dark",
 }: LinksType) {
   return (
-    <ul className={`${styles.links} ${additionalClassName}`}>
+    <ul
+      className={`${styles.links} ${additionalClassName} ${
+        theme === "light" ? styles.light : styles.dark
+      }`}
+    >
       {links.map(({ href, value, target }) => (
         <li className={styles["link-wrapper"]} key={value}>
           <Link href={href} target={target}>
