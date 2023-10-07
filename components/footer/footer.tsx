@@ -23,12 +23,14 @@ export const Footer = () => {
             {COPYRIGHT_CALLUM_ALTON} {year}
           </span>
 
-          <Links
-            additionalClassName={styles.links}
-            links={[resumeLink(isDesktop), mailLink]}
-            arrowType="straight"
-            theme="light"
-          />
+          {isDesktop && (
+            <Links
+              additionalClassName={styles.links}
+              links={[resumeLink(isDesktop), mailLink]}
+              arrowType="straight"
+              theme="light"
+            />
+          )}
         </div>
       </div>
     </footer>
