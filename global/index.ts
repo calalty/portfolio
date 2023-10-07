@@ -77,16 +77,18 @@ export const myInterests: string[] = [
   "roast potatoes",
 ];
 
-export const modalLinks = (isMobile?: boolean) => [
-  { href: isMobile ? "/resume" : pdfUrl, value: "My Resume", target: "_blank" },
-];
+export const resumeLink = (isMobile?: boolean) => ({
+  href: isMobile ? "/resume" : pdfUrl,
+  value: "My Resume",
+  target: "_blank",
+});
 
 export const pageLinks = [
   { href: "/work", value: "My Work" },
   { href: "/contact", value: "Contact Me" },
 ];
 
-export const mail = { href: "mailto:hello@calalton.com", value: "My Mail" };
+export const mailLink = { href: "mailto:hello@calalton.com", value: "My Mail" };
 
 export const sections: string[] = ["hero", "about", "work", "contact"];
 

@@ -30,7 +30,9 @@ export const PageNavigation = () => {
               onClick={() => handleOnClick(index)}
               type="button"
               aria-label={`Go to the ${value} page`}
-              className={activeIndex === index && styles["current"]}
+              className={`${activeIndex === index && styles["current"]} ${
+                activeIndex === 2 && styles["alt-button"]
+              }`}
             ></button>
           </li>
         ))}

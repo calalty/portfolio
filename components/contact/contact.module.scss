@@ -18,7 +18,7 @@ $lg-bp: 43.75rem;
     }
 
     @media screen and (min-width: $lg-bp) {
-        scroll-snap-align: end;
+        scroll-snap-align: center;
         padding: 7.5rem 0;
     }
 }

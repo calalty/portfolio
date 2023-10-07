@@ -1,0 +1,39 @@
+$lg-bp: 43.75rem;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--c-steel-blue);
+    color: var(--c-off-white);
+
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $lg-bp) {
+        scroll-snap-align: end;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90rem;
+    padding: 2rem 4rem;
+
+    @media screen and (min-width: $lg-bp) {
+        padding: 2rem 7.5rem;
+    }
+
+    .copyright {
+        margin-right: 2rem;
+    }
+}
+
+.links {
+    margin: 0;
+}
+
+.right {
+    display: flex;
+}

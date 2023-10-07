@@ -65,3 +65,7 @@ export const EXPERIENCE_PARAGRAPH = `I have worked in a small number of diverse 
 export const OVER_THE_YEARS = "My Career,";
 export const ABOUT_PARAGRAPH_1 =
   "Throughout my professional journey, I've had the privilege of contributing to various organizations and projects, each playing a crucial role in shaping my skills and expertise.";
+
+// Footer content
+
+export const COPYRIGHT_CALLUM_ALTON = "© Callum Alton";

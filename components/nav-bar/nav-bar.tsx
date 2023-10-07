@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "./nav-bar.module.scss";
 import { Logo, Menu } from "../icons";
-import { mail, modalLinks, socialMedias } from "@/global";
+import { mailLink, resumeLink, socialMedias } from "@/global";
 import { MAIL_TITLE, SOCIALS_TITLE, THINGS_TITLE } from "@/contents/global";
 import { useMediaMatch } from "@/hooks/use-media-match/use-media-match";
 import { LinkType } from "@/global/global.type";
@@ -12,7 +12,7 @@ import Links from "../links/links";
 const NavBar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   const isDesktop = useMediaMatch("(min-width: 43.75rem)");
-  const { href, value } = mail;
+  const { href, value } = mailLink;
   const handleOnClick = () => {
     setToggle(!toggle);
   };
@@ -68,7 +68,7 @@ const NavBar = () => {
         }`}
       >
         <div className={styles.info}>
-          {renderNavSection(THINGS_TITLE, modalLinks(isDesktop), "things")}
+          {renderNavSection(THINGS_TITLE, [resumeLink(isDesktop)], "things")}
           {renderNavSection(
             MAIL_TITLE,
             [{ href, value, target: "_blank" }],

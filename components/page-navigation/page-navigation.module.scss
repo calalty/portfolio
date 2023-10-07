@@ -45,6 +45,13 @@ $lg-bp: 43.75rem;
             }
         }
 
+        .alt-button {
+            &::after {
+                background-color: var(--c-off-white);
+                border: 1px solid var(--c-off-white);
+            }
+        }
+
         .current {
             &::after {
                 transform: rotate(0) scale(1.5);
