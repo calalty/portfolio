@@ -26,7 +26,11 @@ $lg-bp: 43.75rem;
     }
 
     .copyright {
-        margin-right: 2rem;
+        margin-left: 2rem;
+
+        @media screen and (min-width: $lg-bp) {
+            margin-right: 2rem;
+        }
     }
 }
 
