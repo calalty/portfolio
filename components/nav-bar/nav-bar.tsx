@@ -18,12 +18,12 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    if (toggle) {
+    if (toggle && !isDesktop) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }, [toggle]);
+  }, [toggle, isDesktop]);
 
   const renderNavSection = (
     title: string,

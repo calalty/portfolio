@@ -129,6 +129,11 @@ export const experienceData: ExperienceType[] = [
         description:
           "I collaborated closely with the design team to ensure that our development work aligned seamlessly with the envisioned product direction. This resulted in a visually appealing and user-centric end product.",
       },
+      {
+        title: "Automated Testing Expertise",
+        description:
+          "Proficient in automated testing, specializing in Playwright for web application testing. Successfully transitioned from Cypress to Playwright for improved compatibility with Azure, enhancing the efficiency and reliability of testing processes.",
+      },
     ],
   },
   {
