@@ -5,10 +5,8 @@ $xl-bp: 125rem;
     max-width: 90rem;
     display: flex;
     justify-content: center;
-    padding: 7rem 0;
     position: relative;
     background-color: var(--bg-color);
-
 
     @media screen and (max-width: $xl-bp) {
         margin: 4rem 7vw;
