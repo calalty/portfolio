@@ -31,6 +31,7 @@ export const ResumeDetails = () => {
           </div>
           <p>{PROFILE_DESCRIPTION}</p>
           <br />
+          <p>{PROFILE_SECOND_PARAGRAPH}</p>
         </section>
         <section className={styles.experience}>
           <h2 className={syneHeading.className}>{EXPERIENCE_TITLE}</h2>
