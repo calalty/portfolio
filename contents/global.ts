@@ -49,8 +49,7 @@ export const PROFILE_DESCRIPTION = `Experienced front-end developer with a stron
   skill set and contribute to pioneering projects that seamlessly
   blend cutting-edge frontend design with powerful backend
   functionalities.`;
-export const PROFILE_SECOND_PARAGRAPH = `I'm on the lookout for a workplace that's not just about the job
-  but also about the vibes! Being the social butterfly that I am,
+export const PROFILE_SECOND_PARAGRAPH = `Being the social butterfly that I am,
   working remotely for the past couple of years hasn't been my cup
   of tea. I'm all about making new friends and forming connections
   while having a blast along the way. Honestly, I'd trade my home
