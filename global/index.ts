@@ -225,6 +225,9 @@ export const coreTechnologies: string[] = [
   "Optimizely",
   "Zustand",
   "Storybook",
+  "React Query",
+  "App Insights",
+  "NextAuth"
 ];
 
 export const others: string[] = [
