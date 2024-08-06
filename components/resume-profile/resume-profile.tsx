@@ -28,8 +28,6 @@ export const ResumeProfile = () => {
 
       <p className={styles.location}>{MANCHESTER_UK}</p>
 
-      <p className={styles.location}>Tel: 07714927325</p>
-
       <div className={styles.skills}>
         <h3 className={syneHeading.className}>{CORE_TECHNOLOGIES_TITLE}</h3>
         <ul>
