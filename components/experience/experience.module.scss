@@ -1,43 +1,43 @@
 .experience {
-    color: var(--c-lavender);
-    margin-top: 2rem;
+  color: var(--c-lavender);
+  margin-top: 2rem;
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    max-width: 70%;
+    margin: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      text-indent: -0.75rem;
+
+      &::before {
+        width: 0.4rem;
+        content: "";
+        height: 0.4rem;
+        margin-right: 0.5rem;
+        vertical-align: 10%;
+        display: inline-block;
+        filter: contrast(1.2);
+        background: currentColor;
+      }
     }
+  }
 
-    ul {
-        max-width: 70%;
-        margin: 0 1rem 1rem 1rem;
+  span {
+    margin-bottom: 1rem;
+    color: var(--c-off-white);
+  }
+  h3 {
+    color: var(--c-off-white);
 
-        li {
-            margin-bottom: 0.5rem;
-            text-indent: -0.75rem;
-
-            &::before {
-                width: 0.4rem;
-                content: '';
-                height: 0.4rem;
-                margin-right: 0.5rem;
-                vertical-align: 10%;
-                display: inline-block;
-                filter: contrast(1.2);
-                background: currentColor;
-            }
-
-            span {
-                color: var(--c-off-white);
-            }
-        }
+    span {
+      color: var(--c-lavender);
     }
-
-    h3 {
-        color: var(--c-off-white);
-
-        span {
-            color: var(--c-lavender);
-        }
-    }
+  }
 }

@@ -100,39 +100,49 @@ export const experienceData: ExperienceType[] = [
     endDate: "Present",
     responsibilities: [
       {
-        title: "Project Involvement",
-        description:
-          "I played a significant role in a new project right from its inception. This experience allowed me to gain valuable insights into the entire development process, from its early stages to its successful completion.",
+        category: "Greenfield Project Development",
+        details: [
+          "Joined Pets At Home during the early stages of a greenfield project, contributing to the development of a new web application.",
+          "Built and designed foundational components using Storybook for consistent UI development.",
+          "Developed pages with Next.js, utilizing React Query for efficient data fetching and Axios for API integration.",
+          "Implemented global state management using Zustand, ensuring seamless state sharing across the application.",
+          "Following the launch in June 2024, led efforts that resulted in a 3% increase in web conversions and a 25-35% rise in app sales.",
+        ],
       },
       {
-        title: "UI Component Design",
-        description:
-          "I had the responsibility of creating intricate user interface components using the Storybook framework. This involved designing complex elements that greatly enhanced the overall user experience.",
+        category: "Technical Solution Design",
+        details: [
+          "Collaborated closely with the Director of Development and backend team to architect the Product Detail Page (PDP).",
+          "Engaged in high-level communication to structure backend data for optimal frontend consumption.",
+        ],
       },
       {
-        title: "Next.js Implementation",
-        description:
-          "I utilized Next.js to optimize the project's structure. This strategic approach improved the project's performance, SEO ranking, and user engagement, resulting in a more satisfying digital experience.",
+        category: "Mentorship & Team Development",
+        details: [
+          "Mentored new team members by familiarizing them with the repo structure and introducing best practices aligned with our technology stack.",
+          "Promoted the use of global state management to reduce prop drilling, thereby simplifying component communication and enhancing code maintainability.",
+        ],
       },
       {
-        title: "Collaboration and Data Integration",
-        description:
-          "I worked closely with the Director of Development and backend developers to ensure seamless data integration. This collaboration optimized the way frontend components consumed data and aligned it effectively with the Product Information Management (PIM) system.",
+        category: "Process Improvement & Automation",
+        details: [
+          "Passionate about workflow optimization, led initiatives to automate routine processes.",
+          "Developing an automation system that sends updates to Microsoft Teams channels upon pull request merges, detailing the squad name, task number, PR link, and pipeline status. This automation reduced interruptions for developers and streamlined communication for delivery leads.",
+        ],
       },
       {
-        title: "Enhanced Application Security",
-        description:
-          "I took steps to strengthen our application's security and reliability. I achieved this by implementing automated testing using Playwright, which ensured a dependable and steadfast user experience.",
+        category: "Automated Testing",
+        details: [
+          "Implemented automated testing using Playwright, significantly improving our bug detection capabilities.",
+          "Wrote test suites to ensure robust assurance, reducing manual testing efforts and increasing deployment confidence.",
+          "Utilized Jest for unit testing across the codebase, maintaining high standards of code and performance.",
+        ],
       },
       {
-        title: "Design Collaboration",
-        description:
-          "I collaborated closely with the design team to ensure that our development work aligned seamlessly with the envisioned product direction. This resulted in a visually appealing and user-centric end product.",
-      },
-      {
-        title: "Automated Testing Expertise",
-        description:
-          "Proficient in automated testing, specializing in Playwright for web application testing. Successfully transitioned from Cypress to Playwright for improved compatibility with Azure, enhancing the efficiency and reliability of testing processes.",
+        category: "Rapid Skill Advancement",
+        details: [
+          "Quickly advanced from a junior to a mid-level role within a few months, demonstrating a strong commitment to professional growth.",
+        ],
       },
     ],
   },
@@ -143,44 +153,25 @@ export const experienceData: ExperienceType[] = [
     endDate: "September 2022",
     responsibilities: [
       {
-        title: "Apprenticeship Completion",
-        description:
-          "I successfully completed a Level 4 apprenticeship program, showcasing my unwavering commitment to continuous learning and professional growth.",
+        category: "Professional Development & Apprenticeship",
+        details: [
+          "Successfully completed a Level 4 apprenticeship program, showcasing commitment to continuous learning and professional growth.",
+          "Actively contributed to agile meetings, including sprint stand-ups, refinements, retrospectives, and reviews, demonstrating commitment to iterative development and teamwork.",
+        ],
       },
       {
-        title: "Content Management",
-        description:
-          "Proficiently managing content using Contentful was a key aspect of my role. I streamlined content workflows, making the process more efficient and effective.",
+        category: "Testing & Optimization",
+        details: [
+          "Conducted A/B tests using Optimizely, enhancing user experiences and supporting data-driven decision-making.",
+          "Designed comprehensive test cases and scripts, maintaining robust test coverage.",
+        ],
       },
       {
-        title: "A/B Testing",
-        description:
-          "I conducted A/B tests using Optimizely, which played a pivotal role in enhancing user experiences and supporting data-driven decision-making.",
-      },
-      {
-        title: "Effective Communication",
-        description:
-          "Facilitating communication across various departments was crucial to our projects' success. I engaged with developers, UX designers, QA professionals, scrum masters, and product owners to ensure alignment and synergy.",
-      },
-      {
-        title: "Active Agile Participation",
-        description:
-          "I actively contributed to essential agile meetings, including sprint stand-up, refinement, retrospective, and review. This demonstrated my dedication to iterative development and effective teamwork.",
-      },
-      {
-        title: "Accessibility Initiatives",
-        description:
-          "I took charge of accessibility initiatives in the Service Centre, implementing automated tests to measure and improve accessibility standards, ensuring that our digital products were more inclusive.",
-      },
-      {
-        title: "Code Deployment Management",
-        description:
-          "Managing code deployment and releases through Azure and Github was a critical responsibility. I ensured a seamless transition of new features into the master branch, maintaining application stability.",
-      },
-      {
-        title: "Comprehensive Testing",
-        description:
-          "Designing comprehensive test cases and scripts while maintaining robust test coverage was part of my role. This ensured the integrity of our code and the stability of our applications.",
+        category: "Communication & Collaboration",
+        details: [
+          "Facilitated communication across departments, engaging with developers, UX designers, QA professionals, scrum masters, and product owners to ensure project alignment.",
+          "Managed code deployment and releases through Azure and GitHub, ensuring seamless transitions of new features and maintaining application stability.",
+        ],
       },
     ],
   },
@@ -191,24 +182,11 @@ export const experienceData: ExperienceType[] = [
     endDate: "June 2020",
     responsibilities: [
       {
-        title: "Coding Bootcamp Experience",
-        description:
-          "I embarked on a transformative 12-week coding bootcamp, immersing myself in a dynamic curriculum that covered various technologies. From JavaScript to C# and Node.js, this experience significantly enhanced my technical skills.",
-      },
-      {
-        title: "Hands-On Projects",
-        description:
-          "To apply my theoretical knowledge, I undertook hands-on projects spanning diverse domains. From creating a versatile calculator and an engaging dice game to working with APIs in projects like Rick & Morty API and Weather API, these experiences solidified my practical command over various tech stacks.",
-      },
-      {
-        title: "Apprenticeship Journey",
-        description:
-          "I honed my skills as an apprentice software engineer, navigating complexities and challenges inherent to real-world development scenarios. This journey was a testament to my commitment to continual growth and excellence in the software engineering domain.",
-      },
-      {
-        title: "Online Learning",
-        description:
-          "I enriched my learning through live online classes, engaging with experts and fellow learners to expand my understanding and perspectives on various technologies.",
+        category: "Bootcamp Experience & Project Work",
+        details: [
+          "Completed a 12-week coding bootcamp, enhancing technical skills in JavaScript, C#, Node.js, and other technologies.",
+          "Undertook practical projects, including creating a calculator, dice game, and working with APIs such as the Weather API.",
+        ],
       },
     ],
   },
@@ -227,20 +205,32 @@ export const coreTechnologies: string[] = [
   "Storybook",
   "React Query",
   "App Insights",
-  "NextAuth"
+  "NextAuth",
+  "Git",
+  "CI/CD Pipelines (e.g., GitHub Actions, Azure)",
 ];
 
 export const others: string[] = [
   "Automation testing.",
   "Responsive web design.",
   "Performance optimization.",
-  "Search engine optimization.",
-  "Building core components in Storybook",
+  "Search engine optimization (SEO).",
+  "Building core components in Storybook.",
   "Communicating backend data structure.",
-  "Self-motivated, and strive to achieve by any means necessary.",
-  "Collaborate effectively with others. I employ a collaborative approach, evaluating team dynamics before contributing my thoughts and ideas to enhance teamwork.",
-  "Continuous drive to innovate and enhance processes for swifter and more efficient outcomes.",
-  "Uncovering unexpected and imaginative solutions that set me apart.",
+  "Problem-solving.",
+  "Adaptability.",
+  "Project management tools (e.g., Jira, Azure).",
+  "Code review practices.",
+  "Security awareness.",
+  "API design and integration (RESTful APIs).",
+  "SQL/NoSQL databases.",
+];
+
+export const personalQualities: string[] = [
+  "Self-motivated and strive to achieve by any means necessary.",
+  "Collaborate effectively with others, evaluating team dynamics to enhance teamwork.",
+  "Innovative and imaginative solutions.",
+  "Strong work ethic with a focus on delivering results and meeting deadlines.",
 ];
 
 export const pdfUrl: string = "/pdfs/CallumAltonPortfolio.pdf";

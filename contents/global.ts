@@ -41,24 +41,17 @@ export const MANCHESTER_UK = "Manchester, UK";
 export const CORE_TECHNOLOGIES_TITLE = "Core Technologies:";
 export const DOWNLOAD = "Download";
 export const OTHERS_TITLE = "Others:";
+export const PERSONAL_QUALITIES_TITLE = "Personal Qualities:";
 export const PROFILE_TITLE = "Profile";
-export const PROFILE_DESCRIPTION = `Experienced front-end developer with a strong foundation in
-  building interactive web applications using React and TypeScript.
-  Eager to explore more about the rise of AI and back-end
-  technologies, my passion for innovation drives me to expand my
-  skill set and contribute to pioneering projects that seamlessly
-  blend cutting-edge frontend design with powerful backend
-  functionalities.`;
-export const PROFILE_SECOND_PARAGRAPH = `Being the social butterfly that I am,
-  working remotely for the past couple of years hasn't been my cup
-  of tea. I'm all about making new friends and forming connections
-  while having a blast along the way. Honestly, I'd trade my home
-  office for a real one any day.`;
+export const PROFILE_DESCRIPTION =
+  "Creative software engineer with strong front-end expertise in React and TypeScript. Excited to broaden my skills into full-stack development and cloud services. Passionate about diving into new technologies and crafting innovative solutions to real-world challenges. I stay on top of the latest trends, including AI, to keep my work fresh and impactful.";
+
+export const PROFILE_SECOND_PARAGRAPH =
+  "I enjoy working in team environments where I can share ideas and collaborate closely with others. While I’ve worked remotely, I’m excited about opportunities to be part of a lively, in-office team where I can contribute and grow alongside my colleagues.";
+
 export const EXPERIENCE_TITLE = "Experience";
-export const EXPERIENCE_PARAGRAPH = `I have worked in a small number of diverse projects within the
-  early stages of my career, I have adeptly navigated through
-  various complexities and technologies, each contributing to my
-  growth as an accomplished front-end developer:`;
+export const EXPERIENCE_PARAGRAPH =
+  "I’ve worked on various front-end projects using React and TypeScript, and I’m currently learning full-stack development and cloud technologies in my spare time. Right now, I’m developing a SaaS boilerplate to make it easier for others to launch their projects. This hands-on approach helps me apply new skills and stay updated with the latest tech.";
 
 // Work content
 export const OVER_THE_YEARS = "My Career,";

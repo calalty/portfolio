@@ -7,6 +7,6 @@ export type ExperienceType = {
 };
 
 type Responsibilities = {
-  title: string;
-  description: string;
+  category: string;
+  details: string[];
 };

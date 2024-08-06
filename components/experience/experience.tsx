@@ -20,9 +20,14 @@ export const Experience = ({
     </header>
 
     <ul>
-      {responsibilities.map(({ title, description }) => (
-        <li key={title}>
-          <span>{title}:</span> {description}
+      {responsibilities.map(({ category, details }) => (
+        <li key={category}>
+          <span>{category}:</span>
+          <ul>
+            {details.map((detail, index) => (
+              <li key={index}>{detail}</li>
+            ))}
+          </ul>
         </li>
       ))}
     </ul>
