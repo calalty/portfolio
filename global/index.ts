@@ -127,7 +127,7 @@ export const experienceData: ExperienceType[] = [
         category: "Process Improvement & Automation",
         details: [
           "Passionate about workflow optimization, led initiatives to automate routine processes.",
-          "Developing an automation system that sends updates to Microsoft Teams channels upon pull request merges, detailing the squad name, task number, PR link, and pipeline status. This automation reduced interruptions for developers and streamlined communication for delivery leads.",
+          "Developing an automation system that sends updates to Microsoft Teams channels upon pull request merges, detailing the squad name, task number, PR link, and pipeline status. This would reduce interruptions for developers and streamline communication for delivery leads.",
         ],
       },
       {
